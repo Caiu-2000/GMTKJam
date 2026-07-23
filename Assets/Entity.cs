@@ -78,20 +78,6 @@ public abstract class Entity : MonoBehaviour, IHittable
     }
 
 
-    //public void SetShield(float amount)
-    //{
-    //    currentShieldedLife = amount;
-    //}
-    //public void AddArmor(float amount)
-    //{
-    //    _armor += amount;
-    //}
-
-    //public void RemoveArmor(float amount)
-    //{
-    //    _armor = Mathf.Max(0, _armor - amount); // can't go below 0
-    //}
-
     void IHittable.Hitt(Hitt hitt)
     {
         applyDamage(hitt.HittDamage);
