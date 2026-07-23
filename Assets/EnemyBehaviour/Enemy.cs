@@ -8,6 +8,7 @@ public class Enemy : Entity
     private void Start()
     {
         _ai = new AiComponnent(this);
+        
         Machine.Initialice(this, _movement , _ai);
     }
 }

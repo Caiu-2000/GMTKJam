@@ -11,9 +11,11 @@ public class AiComponnent
 
     }
 
-    public Vector3 DirectionTowards(Vector3 objectivePos)
+    public Vector2 DirectionTowards(Vector3 objectivePos)
     {
         Vector3 newDir = Vector3.Normalize(objectivePos - _parent.transform.position );
-        return newDir;
+        
+        Vector2 onlydir = new Vector2(newDir.x, newDir.z);
+        return onlydir;
     }
 }

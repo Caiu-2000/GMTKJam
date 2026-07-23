@@ -1,15 +1,15 @@
-using System;
+
 using UnityEngine;
 
-[System.Serializable]
-public abstract class State
+//[System.Serializable]
+public  class State : MonoBehaviour
 {
 
-    [SerializeField] private string StateName;
-    [SerializeField] private string AnimationTrigger;
-    [SerializeField] private State DefaultNextState;
-    private StateMachine ParentMachine;
-    private Entity _controlledEntity;
+    [SerializeField] protected string StateName;
+    [SerializeField] protected string AnimationTrigger;
+    [SerializeField] protected State DefaultNextState;
+    protected StateMachine ParentMachine;
+    protected Entity _controlledEntity;
 
     public void InitialiceState(StateMachine Machine , Entity entity)
     {
@@ -27,7 +27,7 @@ public abstract class State
     
     }
 
-    public void UpdateState()
+    public virtual void UpdateState()
     {
        
     }

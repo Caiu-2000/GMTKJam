@@ -1,16 +1,16 @@
 using System;
 using UnityEngine;
 
-public class StateMachine : MonoBehaviour
+public class StateMachine :MonoBehaviour
 {
-    [SerializeField] private State[] statesList;
-    [SerializeField] private State CurrentState;
-    [SerializeField] private State DefaultState;
+    [SerializeReference] private State[] statesList;
+    [SerializeReference] private State CurrentState;
+    [SerializeReference] private State DefaultState;
 
 
     private Entity _entity;
-    private MovementComponent _movement;
-    private AiComponnent _ai;
+    public MovementComponent _movement;
+    internal  AiComponnent _ai;
 
     internal void Initialice(Enemy enemy, MovementComponent movement , AiComponnent AI)
     {
@@ -25,7 +25,8 @@ public class StateMachine : MonoBehaviour
 
         if (DefaultState != null)
         {
-
+            CurrentState = DefaultState;
+            CurrentState.StartState();
         }
     }
     void Update()
