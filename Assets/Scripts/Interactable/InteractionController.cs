@@ -6,7 +6,7 @@ public class InteractionController : MonoBehaviour
 {
     [SerializeField] Camera playerCamera;
     [SerializeField] TextMeshProUGUI interactionText;
-    [SerializeField] float interactionDistance = 5f;
+    [SerializeField] float interactionDistance = 10f;
     IInteractable currentTargetedInteractable;
     public void Update()
     {
@@ -16,9 +16,25 @@ public class InteractionController : MonoBehaviour
     }
     void UpdateCurrentInteractable()
     {
-        var ray = playerCamera.ViewportPointToRay(new Vector2(0.5f, 0.5f));
-        Physics.Raycast(ray, out var hit, interactionDistance);
-        currentTargetedInteractable = hit.collider?.GetComponent<IInteractable>();
+        Collider closestCollider = null;
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, interactionDistance);
+        foreach (Collider collider in hitColliders)
+        {
+            if (collider?.GetComponent<IInteractable>() != null && closestCollider != null)
+            {
+                Vector3 closestPointNew = collider.ClosestPoint(transform.position);
+                Vector3 closestPointOld = closestCollider.ClosestPoint(transform.position);
+                if(Vector3.Distance(transform.position, closestPointNew) < Vector3.Distance(transform.position, closestPointOld))
+                {
+                    closestCollider = collider;
+                }
+            }
+            else if (collider?.GetComponent<IInteractable>() != null)
+            {
+                closestCollider = collider;
+            }
+        }
+        currentTargetedInteractable = closestCollider?.GetComponent<IInteractable>();
     }
     void UpdateInteractionText()
     {

@@ -22,4 +22,6 @@ public class GeneralHandler : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
+    public Player GetPlayer()
+        { return player; }
 }
