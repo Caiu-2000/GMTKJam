@@ -53,7 +53,7 @@ public class CombatComponnetnt : MonoBehaviour
                 {
                     
                     if (FromPlayer && collider.gameObject.GetComponent<Player>() ) continue;
-                    print("Hittable" + collider.name);
+             
                     collider.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage));
                 }
             
@@ -85,4 +85,9 @@ public class CombatComponnetnt : MonoBehaviour
         return  new Vector3(position.x , 1 , position.z);
     }
 
+
+    public void ChangeWeapon(Tool newWeapon)
+    {
+        CurrentWeapon = newWeapon;
+    }
 }

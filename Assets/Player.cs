@@ -11,4 +11,11 @@ public class Player : Entity
         _combat.InitialiceThis(input);
     }
 
+
+    public void ChangeWeapon(Tool newWeapon)
+    {
+        _combat.ChangeWeapon(newWeapon);
+    }
+
+
 }
