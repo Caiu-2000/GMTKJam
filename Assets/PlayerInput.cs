@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 using UnityEngine.InputSystem;
@@ -16,7 +17,7 @@ public class PlayerInput : MonoBehaviour
     
     Vector2 _dir = Vector2.zero;
     private bool CanInputActions = true;
-
+    private Vector3 currentWorldPosition;
 
 
     public delegate void AttacksDelegate();
@@ -35,6 +36,8 @@ public class PlayerInput : MonoBehaviour
 
     public Parry OnParryPressed = delegate { };
 
+    [SerializeField] private MovementComponent _movement;
+
     // Este todavia no se usa pero ya queda aca
     // public UseAction OnUseReleased = delegate { };
 
@@ -50,12 +53,7 @@ public class PlayerInput : MonoBehaviour
         _jumpAtion = InputSystem.actions.FindAction("Jump");
         _rightClickAction = InputSystem.actions.FindAction("SecondClick");
 
-        _parryAction = InputSystem.actions.FindAction("Parry");
-        _useItemAction = InputSystem.actions.FindAction("UseItem");
-
-
-        UnityEngine.Cursor.visible = false;
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+       
 
 
 
@@ -64,15 +62,16 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+            
+
+
+
+        currentWorldPosition = GetMouseWorldPosition();
+        GeneralHandler.MouseWorldPosition = currentWorldPosition;
+        Debug.DrawLine(Camera.main.transform.position, currentWorldPosition, Color.green);
+    
 
         _dir = _movementAction.ReadValue<Vector2>();
-        /*
-        if (_interactAction.WasPressedThisFrame()) _EntityController.InteractPressed();
-
-
-        Vector2 lookDir = _lookAction.ReadValue<Vector2>();
-        _playerMovement.Rotate(lookDir);
-        */
 
 
 
@@ -95,15 +94,6 @@ public class PlayerInput : MonoBehaviour
             if (_rightClickAction.WasPressedThisFrame())
             {
 
-            }
-            if (_useItemAction.WasPressedThisFrame())
-            {
-                OnUseItemPressed?.Invoke();
-            }
-
-            if (_parryAction.WasPressedThisFrame())
-            {
-                OnParryPressed?.Invoke();
             }
 
         }
@@ -137,7 +127,7 @@ public class PlayerInput : MonoBehaviour
     private void FixedUpdate()
     {
 
-       // _playerMovement.Movement(new Vector3(_dir.x, _dir.y, 0));
+       _movement.Move(_dir);
     }
 
     public void DeactivateActions()
@@ -159,6 +149,36 @@ public class PlayerInput : MonoBehaviour
     {
 
     }
+
+
+
+
+    #region Mouse
+
+
+    public Vector3 GetMouseWorldPosition()
+    {
+        Vector2 mouseScreenPosition = Mouse.current.position.ReadValue();
+
+        Ray ray = Camera.main.ScreenPointToRay(mouseScreenPosition);
+
+        Plane worldPlane = new Plane(Vector3.up, new Vector3(0, 0, 0));
+
+        if (worldPlane.Raycast(ray, out float distance))
+        {
+            return ray.GetPoint(distance);
+        }
+
+        return Vector3.zero;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(currentWorldPosition, 0.2f);
+    }
+
+    #endregion
+
 
 
 

@@ -24,6 +24,8 @@ public abstract class Entity : MonoBehaviour, IHittable
     public Dead OnEntityDead = delegate { };
     public Attack OnEntityAttacked = delegate { };
 
+    [SerializeField] protected MovementComponent _movement;
+    [SerializeField] protected CombatComponnetnt _combat;
 
     private void Awake()
     {
@@ -31,6 +33,8 @@ public abstract class Entity : MonoBehaviour, IHittable
         _currentStamina = _maxStamina;
         
     }
+
+
 
     public virtual void applyDamage(float damage)
     {
