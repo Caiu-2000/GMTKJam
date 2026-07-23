@@ -1,6 +1,7 @@
 
 using UnityEngine;
 
+[RequireComponent (typeof(Animator))]
 public abstract class Entity : MonoBehaviour, IHittable
 {
 
@@ -11,6 +12,12 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     public float _maxStamina = 100.0f, _currentStamina = 0.0f;
     public float _StaminaCD = 1f, _StaminaCount = 0, _StaminaRegen = 25f;
+
+    [SerializeField] protected MovementComponent _movement;
+    [SerializeField] protected CombatComponnetnt _combat;
+    public Animator _animator;
+    private AiComponnent _aiComponnent;
+    #region Delegates
 
     public delegate void HealthChange(float NewHealth, float MaxHealth);
     public HealthChange OnHealthChanged = delegate { };
@@ -24,14 +31,14 @@ public abstract class Entity : MonoBehaviour, IHittable
     public Dead OnEntityDead = delegate { };
     public Attack OnEntityAttacked = delegate { };
 
-    [SerializeField] protected MovementComponent _movement;
-    [SerializeField] protected CombatComponnetnt _combat;
-
+    #endregion
+    
     private void Awake()
     {
         _currentLife = _maxLife;
         _currentStamina = _maxStamina;
-        
+        _animator = GetComponent<Animator>();
+
     }
 
 
