@@ -36,21 +36,21 @@ public class campfireFlicker : MonoBehaviour
         }
         baseIntensity = endValue;
     }
-    void AddFuel(float amout)
+    public void AddFuel(float amout)
     {
         Debug.Log("Se añadio combustible");
         if(dimLightRoutine != null) StopCoroutine(dimLightRoutine);
         baseIntensity += amout;
-        float newTime = baseIntensity * 20f; //Como el base de 3 toma 1 minuto (60 seg) en apagarse base 1 toma 20 seg
+        float newTime = baseIntensity * 0.6f; //Como el base de 100 toma 1 minuto (60 seg) en apagarse base 1 toma 0.6 seg
         if(flameLight.enabled == false) flameLight.enabled = true;
         dimLightRoutine = StartCoroutine(DimLight(baseIntensity, 0f, newTime));
     }
-    void RemoveFuel(float amout)
+    public void RemoveFuel(float amout)
     {
         Debug.Log("Se saco combustible");
         StopCoroutine(dimLightRoutine);
         baseIntensity -= amout;
-        float newTime = baseIntensity * 20f;
+        float newTime = baseIntensity * 0.6f;
         dimLightRoutine = StartCoroutine(DimLight(baseIntensity, 0f, newTime));
     }    
 }
