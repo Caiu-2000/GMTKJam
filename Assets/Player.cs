@@ -12,4 +12,11 @@ public class Player : Entity
         inventory = new Inventory();
     }
 
+
+    public void ChangeWeapon(Tool newWeapon)
+    {
+        _combat.ChangeWeapon(newWeapon);
+    }
+
+
 }
