@@ -4,6 +4,9 @@ public class Inventory
 {
     int logs = 0;
     int gold = 0;
+    int mobDropEspectro = 0;
+    int mobDropOjo = 0;
+    #region logs
     public void AddLogs(int amount)
     {
         Debug.Log("Se agrego un tronco");
@@ -13,6 +16,12 @@ public class Inventory
     {
         logs -= amount;
     }
+    public int GetLogs()
+    {
+        return logs;
+    }
+    #endregion
+    #region gold
     public void AddGold(int amount)
     {
         Debug.Log("Se agrego un tronco");
@@ -22,9 +31,33 @@ public class Inventory
     {
         gold -= amount;
     }
-    public int GetLogs()
-    {
-        return logs;
-    }
+    
     public int GetGold() { return gold; }
+    #endregion
+    #region Espectro
+    public void AddLootEspectro(int amount)
+    {
+        Debug.Log("Se agrego un tronco");
+        mobDropEspectro += amount;
+    }
+    public void RemoveLootEspectro(int amount)
+    {
+        mobDropEspectro -= amount;
+    }
+
+    public int GetLootEspectro() { return mobDropEspectro; }
+    #endregion
+    #region Ojo
+    public void AddLootOjo(int amount)
+    {
+        Debug.Log("Se agrego un tronco");
+        mobDropOjo += amount;
+    }
+    public void RemoveLootOjo(int amount)
+    {
+        mobDropOjo -= amount;
+    }
+
+    public int GetLootOjo() { return mobDropOjo; }
+    #endregion
 }

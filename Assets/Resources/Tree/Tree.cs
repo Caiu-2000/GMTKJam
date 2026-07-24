@@ -4,6 +4,7 @@ using UnityEngine;
 public class Tree : MonoBehaviour, IHittable
 {
     [SerializeField] float life = 3;
+    [SerializeField] int woodToGive = 1;
     bool vulnerable = false;
     public void Hitt(Hitt hitt)
     {
@@ -19,7 +20,7 @@ public class Tree : MonoBehaviour, IHittable
         if (life <= 0)
         {
             Player player = GeneralHandler.Instance.GetPlayer();
-            player.inventory.AddLogs(1);
+            player.inventory.AddLogs(woodToGive);
             Destroy(gameObject);
         }
     }
