@@ -19,6 +19,7 @@ public class SoundEmitterComponent
 
     public virtual void InitializeThis(Entity ParentEntity= null)
     {
+        _audioSource = ParentEntity.GetComponent<AudioSource>();
      _audioSource.outputAudioMixerGroup = AudioMixerGroup;
 
         foreach (AudioAlbum album in AudioAlbum)

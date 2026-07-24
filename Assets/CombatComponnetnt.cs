@@ -1,5 +1,5 @@
 using System.Collections;
-
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -11,12 +11,13 @@ public class CombatComponnetnt : MonoBehaviour
     public bool FromPlayer = false;
 
     private bool CanAttack = true;
+    private Entity ControllingEntity;
     
 
     #region Debug
 
     private bool Drawdebug = false;
-
+    private Vector3 LastAttackedPos;
     #endregion
 
 
@@ -25,26 +26,38 @@ public class CombatComponnetnt : MonoBehaviour
     {
         _input.OnAttackPressed += Attack;
         FromPlayer = true;
+        ControllingEntity = GeneralHandler.player;
+    }
+    public void InitialiceThis(StateMachine Machine , Enemy enemy)
+    {
+        ControllingEntity = enemy;
+        Machine.OnAttack += Attack;
+        
     }
 
-    public void Attack()
+    public void Attack( Vector3 AttackedGlobalPosition)
     {
+        print("Se llamo attack");
         if (!CanAttack) { return; }
         StartCoroutine(AttackCd());
-        StartCoroutine(AttackSecuence());
+        LastAttackedPos = AttackedGlobalPosition;
+        StartCoroutine(AttackSecuence(AttackedGlobalPosition));
+        ControllingEntity.OnEntityAttacked?.Invoke();
 
     }
 
 
-    private IEnumerator AttackSecuence()
+    private IEnumerator AttackSecuence(Vector3 AttackedPos)
     {
+      
         float elapsedtime = 0.0f;
         yield return new WaitForSeconds(0.05f);
         while (true)
         {
             elapsedtime += Time.deltaTime;
             // TODO : CREAR UNA LAYER QUE SEA DE GOLPEABLES Y SOLO HACER PHISICS OVERLAP AHI
-            Collider[] collided =  Physics.OverlapBox(transform.position + new Vector3(1, 0, 0), CurrentWeapon.HittboxSize);
+            Vector3 attackworldposition = AttackPosition(AttackedPos);
+            Collider[] collided =  Physics.OverlapBox(attackworldposition, CurrentWeapon.HittboxSize);
             Drawdebug = true;
             foreach (Collider collider in collided) 
             {
@@ -53,8 +66,9 @@ public class CombatComponnetnt : MonoBehaviour
                 {
                     
                     if (FromPlayer && collider.gameObject.GetComponent<Player>() ) continue;
-             
-                    collider.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage));
+                    if (!FromPlayer && collider.gameObject.GetComponent<Enemy>()) continue;
+                    print("COnsegui llegar aca con collider de + " + collider.gameObject.name);
+                    ApplyAttack(collider);
                 }
             
             }
@@ -62,7 +76,7 @@ public class CombatComponnetnt : MonoBehaviour
             if (elapsedtime > 0.05f) break;
             yield return null;
         }
-        Drawdebug = false;
+       Drawdebug = false;
     }
 
     private IEnumerator AttackCd()
@@ -75,12 +89,12 @@ public class CombatComponnetnt : MonoBehaviour
     private void OnDrawGizmos()
     {
         if (!Drawdebug) return;
-        Gizmos.DrawWireCube(AttackPosition(GeneralHandler.MouseWorldPosition), CurrentWeapon.HittboxSize);
+        Gizmos.DrawWireCube(AttackPosition(LastAttackedPos), CurrentWeapon.HittboxSize);
     }
 
     protected Vector3 AttackPosition(Vector3 pointedPos)
     {
-        Vector3 position = Vector3.Normalize(pointedPos -transform.position )  * 1.1f + GeneralHandler.player.transform.position;
+        Vector3 position = Vector3.Normalize(pointedPos -transform.position )  * 1.1f + transform.position;
 
         return  new Vector3(position.x , 1 , position.z);
     }
@@ -89,5 +103,13 @@ public class CombatComponnetnt : MonoBehaviour
     public void ChangeWeapon(Tool newWeapon)
     {
         CurrentWeapon = newWeapon;
+    }
+    public void ApplyAttack(Collider hittedObj)
+    {
+        hittedObj.gameObject.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage , AttackPosition(LastAttackedPos)));
+    }
+    public void ApplyAttack(Player player)
+    {
+        player.Hitt(new Hitt(CurrentWeapon.damage, LastAttackedPos)) ;
     }
 }

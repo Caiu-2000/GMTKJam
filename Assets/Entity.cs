@@ -1,6 +1,9 @@
 
+using System.Collections;
 using UnityEngine;
 
+[RequireComponent (typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 public abstract class Entity : MonoBehaviour, IHittable
 {
 
@@ -12,10 +15,22 @@ public abstract class Entity : MonoBehaviour, IHittable
     public float _maxStamina = 100.0f, _currentStamina = 0.0f;
     public float _StaminaCD = 1f, _StaminaCount = 0, _StaminaRegen = 25f;
 
+    [SerializeField] protected MovementComponent _movement;
+    [SerializeField] protected CombatComponnetnt _combat;
+    [HideInInspector]public Animator _animator;
+    private AiComponnent _aiComponnent;
+
+    [SerializeField]
+    protected EntitySoundComponent SoundEmmiter = new EntitySoundComponent();
+
+
+
+    #region Delegates
+
     public delegate void HealthChange(float NewHealth, float MaxHealth);
     public HealthChange OnHealthChanged = delegate { };
 
-    public delegate void Damaged();
+    public delegate void Damaged(Hitt attak);
     public Damaged OnDamaged = delegate { };
 
     public delegate void Dead();
@@ -24,24 +39,26 @@ public abstract class Entity : MonoBehaviour, IHittable
     public Dead OnEntityDead = delegate { };
     public Attack OnEntityAttacked = delegate { };
 
-    [SerializeField] protected MovementComponent _movement;
-    [SerializeField] protected CombatComponnetnt _combat;
-
+    #endregion
+    
     private void Awake()
     {
         _currentLife = _maxLife;
         _currentStamina = _maxStamina;
-        
+        _animator = GetComponent<Animator>();
+
     }
 
 
 
-    public virtual void applyDamage(float damage)
+    public virtual void applyDamage(float damage , Hitt attack)
     {
+        if (_damCD) return;
 
+        StartCoroutine(DamCd());
         if (_currentLife == 0) _currentLife = _maxLife;
-
-        OnDamaged?.Invoke();
+        _currentLife -= damage;
+        OnDamaged?.Invoke(attack);
         if (_currentLife <= 0)
         {
             Die();
@@ -82,8 +99,21 @@ public abstract class Entity : MonoBehaviour, IHittable
     }
 
 
-    void IHittable.Hitt(Hitt hitt)
+    public void Hitt(Hitt hitt)
     {
-        applyDamage(hitt.HittDamage);
+        print(hitt.AttackFrom);
+        applyDamage(hitt.HittDamage , hitt );
     }
+
+
+
+    private IEnumerator DamCd()
+    {
+        _damCD = true;
+        yield return new WaitForSeconds(0.1f);
+        _damCD = false;
+    }
+
+
+
 }

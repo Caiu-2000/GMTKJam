@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 public class PlayerInput : MonoBehaviour
 {
     
-    private InputAction _useAction, _useItemAction, _movementAction, _lookAction, _attackAction, _interactAction, _blockAction, _jumpAtion, _rightClickAction;
+    private InputAction _useAction, _useItemAction, _movementAction, _lookAction, _attackAction, _interactAction, _blockAction, _rightClickAction;
     private InputAction _parryAction;
     
     Vector2 _dir = Vector2.zero;
@@ -20,7 +20,7 @@ public class PlayerInput : MonoBehaviour
     private Vector3 currentWorldPosition;
 
 
-    public delegate void AttacksDelegate();
+    public delegate void AttacksDelegate(Vector3 Objective);
 
     public delegate void JumpPress();
     public delegate void UseAction();
@@ -50,7 +50,7 @@ public class PlayerInput : MonoBehaviour
         _interactAction = InputSystem.actions.FindAction("Interact");
 
         _useAction = InputSystem.actions.FindAction("Use");
-        _jumpAtion = InputSystem.actions.FindAction("Jump");
+     
         _rightClickAction = InputSystem.actions.FindAction("SecondClick");
 
        
@@ -80,11 +80,11 @@ public class PlayerInput : MonoBehaviour
             if (_attackAction.WasPressedThisFrame())
             {
 
-                OnAttackPressed?.Invoke();
+                OnAttackPressed?.Invoke(currentWorldPosition);
             }
             if (_attackAction.WasReleasedThisFrame())
             {
-                OnAttackReleased?.Invoke();
+                OnAttackReleased?.Invoke(currentWorldPosition);
             }
 
             if (_useAction.WasPressedThisFrame())
@@ -97,10 +97,7 @@ public class PlayerInput : MonoBehaviour
             }
 
         }
-        if (_jumpAtion.WasPressedThisFrame())
-        {
-            OnJumpPress?.Invoke();
-        }
+
 
         /*
          * si metemos inventario usamos esto para la hotbar
