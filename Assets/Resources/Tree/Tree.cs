@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class Tree : MonoBehaviour, IHittable
 {
-    [SerializeField] int life = 3;
+    [SerializeField] float life = 3;
     bool vulnerable = false;
     public void Hitt(Hitt hitt)
     {
         if (!vulnerable)
         {
-            life -= 1;
+            life -= hitt.HittDamage;
             vulnerable = true;
             StartCoroutine(IFrame());
         }
