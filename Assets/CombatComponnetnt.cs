@@ -45,14 +45,15 @@ public class CombatComponnetnt : MonoBehaviour
 
     private IEnumerator AttackSecuence(Vector3 AttackedPos)
     {
-        print("Ataco  " + AttackedPos + "  " + AttackPosition(AttackedPos));
+      
         float elapsedtime = 0.0f;
         yield return new WaitForSeconds(0.05f);
         while (true)
         {
             elapsedtime += Time.deltaTime;
             // TODO : CREAR UNA LAYER QUE SEA DE GOLPEABLES Y SOLO HACER PHISICS OVERLAP AHI
-            Collider[] collided =  Physics.OverlapBox(AttackPosition(AttackedPos), CurrentWeapon.HittboxSize);
+            Vector3 attackworldposition = AttackPosition(AttackedPos);
+            Collider[] collided =  Physics.OverlapBox(attackworldposition, CurrentWeapon.HittboxSize);
             Drawdebug = true;
             foreach (Collider collider in collided) 
             {
@@ -101,10 +102,10 @@ public class CombatComponnetnt : MonoBehaviour
     }
     public void ApplyAttack(Collider hittedObj)
     {
-        hittedObj.gameObject.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage));
+        hittedObj.gameObject.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage , AttackPosition(LastAttackedPos)));
     }
     public void ApplyAttack(Player player)
     {
-        player.Hitt(new Hitt(CurrentWeapon.damage));
+        player.Hitt(new Hitt(CurrentWeapon.damage, LastAttackedPos)) ;
     }
 }

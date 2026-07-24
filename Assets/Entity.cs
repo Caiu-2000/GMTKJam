@@ -23,7 +23,7 @@ public abstract class Entity : MonoBehaviour, IHittable
     public delegate void HealthChange(float NewHealth, float MaxHealth);
     public HealthChange OnHealthChanged = delegate { };
 
-    public delegate void Damaged();
+    public delegate void Damaged(Hitt attak);
     public Damaged OnDamaged = delegate { };
 
     public delegate void Dead();
@@ -44,13 +44,14 @@ public abstract class Entity : MonoBehaviour, IHittable
 
 
 
-    public virtual void applyDamage(float damage)
+    public virtual void applyDamage(float damage , Hitt attack)
     {
         if (_damCD) return;
+
         StartCoroutine(DamCd());
         if (_currentLife == 0) _currentLife = _maxLife;
         _currentLife -= damage;
-        OnDamaged?.Invoke();
+        OnDamaged?.Invoke(attack);
         if (_currentLife <= 0)
         {
             Die();
@@ -93,7 +94,8 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     public void Hitt(Hitt hitt)
     {
-        applyDamage(hitt.HittDamage);
+        print(hitt.AttackFrom);
+        applyDamage(hitt.HittDamage , hitt );
     }
 
 

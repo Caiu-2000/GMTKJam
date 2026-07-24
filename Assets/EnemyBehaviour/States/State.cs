@@ -8,6 +8,7 @@ public  class State : MonoBehaviour
     [SerializeField] public string StateName;
     [SerializeField] protected string AnimationTrigger;
     [SerializeField] protected State DefaultNextState;
+    [SerializeField] public bool IsPausable = true;
     protected StateMachine ParentMachine;
     protected Entity _controlledEntity;
 
@@ -30,5 +31,14 @@ public  class State : MonoBehaviour
     public virtual void UpdateState()
     {
        
+    }
+
+    public virtual void PauseState()
+    {
+
+    }
+    public virtual void ResumeState()
+    {
+
     }
 }

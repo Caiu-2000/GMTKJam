@@ -532,6 +532,7 @@ GameObject:
   - component: {fileID: 459641412}
   - component: {fileID: 459641411}
   - component: {fileID: 459641410}
+  - component: {fileID: 459641421}
   - component: {fileID: 459641420}
   - component: {fileID: 459641409}
   - component: {fileID: 459641418}
@@ -595,9 +596,11 @@ MonoBehaviour:
   - {fileID: 459641418}
   - {fileID: 459641419}
   - {fileID: 459641420}
+  - {fileID: 459641421}
   CurrentState: {fileID: 0}
   DefaultState: {fileID: 459641409}
   DeathState: {fileID: 459641418}
+  _damaged: {fileID: 459641421}
   _movement:
     _RB: {fileID: 0}
     _parentEntity: {fileID: 0}
@@ -794,6 +797,21 @@ MonoBehaviour:
   chargeDuration: 0.2
   ChargeCD: 0.8
   ChargeInCD: 0
+--- !u!114 &459641421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459641408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f09668684c23164aa7cb8527e38d529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateName: 
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 0}
 --- !u!1 &475881983
 GameObject:
   m_ObjectHideFlags: 0
