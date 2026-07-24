@@ -5,7 +5,7 @@ using UnityEngine;
 public  class State : MonoBehaviour
 {
 
-    [SerializeField] protected string StateName;
+    [SerializeField] public string StateName;
     [SerializeField] protected string AnimationTrigger;
     [SerializeField] protected State DefaultNextState;
     protected StateMachine ParentMachine;

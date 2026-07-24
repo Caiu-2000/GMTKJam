@@ -527,13 +527,15 @@ GameObject:
   - component: {fileID: 459641415}
   - component: {fileID: 459641414}
   - component: {fileID: 459641413}
+  - component: {fileID: 459641417}
+  - component: {fileID: 459641416}
   - component: {fileID: 459641412}
   - component: {fileID: 459641411}
   - component: {fileID: 459641410}
+  - component: {fileID: 459641420}
   - component: {fileID: 459641409}
-  - component: {fileID: 459641416}
   - component: {fileID: 459641418}
-  - component: {fileID: 459641417}
+  - component: {fileID: 459641419}
   m_Layer: 0
   m_Name: EnemyPrototype
   m_TagString: Untagged
@@ -553,7 +555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20d4e345494fa940955963552e01f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Patroll
   AnimationTrigger: 
   DefaultNextState: {fileID: 459641410}
   DetectionRange: 10
@@ -569,9 +570,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cd49f51dcfc4c45834a07cb54d852f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
+  RangeForAttack: 3
+  ChargeState: {fileID: 459641419}
+  Attack: {fileID: 459641420}
 --- !u!114 &459641411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,6 +591,8 @@ MonoBehaviour:
   - {fileID: 459641409}
   - {fileID: 459641410}
   - {fileID: 459641418}
+  - {fileID: 459641419}
+  - {fileID: 459641420}
   CurrentState: {fileID: 0}
   DefaultState: {fileID: 459641409}
   DeathState: {fileID: 459641418}
@@ -687,6 +692,7 @@ Transform:
   m_Children:
   - {fileID: 1550456668}
   - {fileID: 278639016}
+  - {fileID: 1283602725}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &459641416
@@ -704,7 +710,7 @@ MonoBehaviour:
   CurrentWeapon:
     damage: 10
     weaponSprite: {fileID: 0}
-    HittboxSize: {x: 0, y: 0, z: 0}
+    HittboxSize: {x: 1, y: 1, z: 1}
     name: 
     Tier: 0
   FromPlayer: 0
@@ -743,9 +749,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65352cf81140634fa822c46e2cb5938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
+--- !u!114 &459641419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459641408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d8e6a0e765b5043895d14e61575152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 459641410}
+  SpeedMultiplier: 5
+  chargeDuration: 2
+  CastDuration: 0.5
+  ChargeCD: 2
+  ChargeInCD: 0
+--- !u!114 &459641420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459641408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1931c00f1e5097149be814845e067ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 459641410}
+  chargeDuration: 0.2
+  CastDuration: 0
+  ChargeCD: 0.4
+  ChargeInCD: 0
 --- !u!1 &643126005
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +910,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1283602724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1283602725}
+  - component: {fileID: 1283602727}
+  - component: {fileID: 1283602726}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1283602725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283602724}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 459641415}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1283602726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283602724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a669e281c3ea9b34d90b77d96c718e0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HitDuration: -1
+  combat: {fileID: 459641416}
+--- !u!135 &1283602727
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283602724}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.7
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1298920731
 GameObject:
   m_ObjectHideFlags: 0

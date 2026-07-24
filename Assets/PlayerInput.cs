@@ -20,7 +20,7 @@ public class PlayerInput : MonoBehaviour
     private Vector3 currentWorldPosition;
 
 
-    public delegate void AttacksDelegate();
+    public delegate void AttacksDelegate(Vector3 Objective);
 
     public delegate void JumpPress();
     public delegate void UseAction();
@@ -80,11 +80,11 @@ public class PlayerInput : MonoBehaviour
             if (_attackAction.WasPressedThisFrame())
             {
 
-                OnAttackPressed?.Invoke();
+                OnAttackPressed?.Invoke(currentWorldPosition);
             }
             if (_attackAction.WasReleasedThisFrame())
             {
-                OnAttackReleased?.Invoke();
+                OnAttackReleased?.Invoke(currentWorldPosition);
             }
 
             if (_useAction.WasPressedThisFrame())
