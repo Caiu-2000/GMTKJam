@@ -6,7 +6,7 @@ public class StateMachine :MonoBehaviour
     [SerializeReference] private State[] statesList;
     [SerializeReference] private State CurrentState;
     [SerializeReference] private State DefaultState;
-
+    [SerializeField] private State DeathState;
 
     private Entity _entity;
     public MovementComponent _movement;
@@ -45,4 +45,8 @@ public class StateMachine :MonoBehaviour
 
     }
 
+    public void CharacterDied()
+    {
+        ChangeState(DeathState);
+    }
 }

@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent (typeof(Animator))]
@@ -15,7 +16,7 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     [SerializeField] protected MovementComponent _movement;
     [SerializeField] protected CombatComponnetnt _combat;
-    public Animator _animator;
+    [HideInInspector]public Animator _animator;
     private AiComponnent _aiComponnent;
     #region Delegates
 
@@ -45,9 +46,10 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     public virtual void applyDamage(float damage)
     {
-
+        if (_damCD) return;
+        StartCoroutine(DamCd());
         if (_currentLife == 0) _currentLife = _maxLife;
-
+        _currentLife -= damage;
         OnDamaged?.Invoke();
         if (_currentLife <= 0)
         {
@@ -89,8 +91,20 @@ public abstract class Entity : MonoBehaviour, IHittable
     }
 
 
-    void IHittable.Hitt(Hitt hitt)
+    public void Hitt(Hitt hitt)
     {
         applyDamage(hitt.HittDamage);
     }
+
+
+
+    private IEnumerator DamCd()
+    {
+        _damCD = true;
+        yield return new WaitForSeconds(0.1f);
+        _damCD = false;
+    }
+
+
+
 }

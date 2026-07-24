@@ -44,17 +44,18 @@ public class CombatComponnetnt : MonoBehaviour
         {
             elapsedtime += Time.deltaTime;
             // TODO : CREAR UNA LAYER QUE SEA DE GOLPEABLES Y SOLO HACER PHISICS OVERLAP AHI
-            Collider[] collided =  Physics.OverlapBox(transform.position + new Vector3(1, 0, 0), CurrentWeapon.HittboxSize);
+            Collider[] collided =  Physics.OverlapBox(AttackPosition(GeneralHandler.MouseWorldPosition), CurrentWeapon.HittboxSize);
             Drawdebug = true;
             foreach (Collider collider in collided) 
             {
                 
                 if (collider.TryGetComponent<IHittable>( out IHittable hittable))
                 {
-                    
+                    if (collider.GetComponent<Enemy>()) { print("Se detecto un enemigo"); }
                     if (FromPlayer && collider.gameObject.GetComponent<Player>() ) continue;
-             
-                    collider.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage));
+
+                    ApplyAttack(collider);
+                    
                 }
             
             }
@@ -89,5 +90,13 @@ public class CombatComponnetnt : MonoBehaviour
     public void ChangeWeapon(Tool newWeapon)
     {
         CurrentWeapon = newWeapon;
+    }
+    public void ApplyAttack(Collider hittedObj)
+    {
+        hittedObj.gameObject.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage));
+    }
+    public void ApplyAttack(Player player)
+    {
+        player.Hitt(new Hitt(CurrentWeapon.damage));
     }
 }
