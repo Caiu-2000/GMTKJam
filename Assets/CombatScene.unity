@@ -241,6 +241,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &166168099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 166168101}
+  - component: {fileID: 166168100}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &166168100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166168099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0d5b1fc1be43349af4ed7625658b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
+  albums: []
+  AudioMixer:
+  - {fileID: 24300002, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+  - {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+--- !u!4 &166168101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166168099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.213242, y: 1.337334, z: 12.35884}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &278639015
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 278639016}
   - component: {fileID: 278639017}
+  - component: {fileID: 278639018}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -328,6 +378,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &278639018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278639015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694b2c31c62449149b502c7e9d574581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entity: {fileID: 459641412}
 --- !u!4 &299677656 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2561918257210358732, guid: d0a77c6eb5808fb45ab13b668c715f90, type: 3}
@@ -343,7 +406,6 @@ GameObject:
   m_Component:
   - component: {fileID: 432492573}
   - component: {fileID: 432492572}
-  - component: {fileID: 432492571}
   - component: {fileID: 432492570}
   - component: {fileID: 432492574}
   - component: {fileID: 432492575}
@@ -398,14 +460,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &432492571
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 432492569}
-  m_Enabled: 1
 --- !u!20 &432492572
 Camera:
   m_ObjectHideFlags: 0
@@ -537,6 +591,7 @@ GameObject:
   - component: {fileID: 459641409}
   - component: {fileID: 459641418}
   - component: {fileID: 459641419}
+  - component: {fileID: 459641422}
   m_Layer: 0
   m_Name: EnemyPrototype
   m_TagString: Untagged
@@ -559,6 +614,7 @@ MonoBehaviour:
   StateName: Patroll
   AnimationTrigger: 
   DefaultNextState: {fileID: 459641410}
+  IsPausable: 1
   DetectionRange: 10
 --- !u!114 &459641410
 MonoBehaviour:
@@ -575,6 +631,7 @@ MonoBehaviour:
   StateName: Chasing
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
+  IsPausable: 1
   RangeForAttack: 3
   ChargeState: {fileID: 459641419}
   Attack: {fileID: 459641420}
@@ -633,6 +690,19 @@ MonoBehaviour:
     Speed: 5
   _combat: {fileID: 459641416}
   _animator: {fileID: 459641414}
+  SoundEmmiter:
+    _audioSource: {fileID: 459641422}
+    sounds:
+    - soundName: 
+      type: 8
+      soundClip: {fileID: 8300000, guid: 1dd8ab3e024909d4bb5a7858e8da53d5, type: 3}
+      AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+      volume: 0.5
+      pitch: 1
+      IsLoop: 0
+      Source: {fileID: 0}
+    AudioAlbum: []
+    AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
   Machine: {fileID: 459641411}
 --- !u!54 &459641413
 Rigidbody:
@@ -759,6 +829,7 @@ MonoBehaviour:
   StateName: Death
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
+  IsPausable: 0
 --- !u!114 &459641419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,10 +845,11 @@ MonoBehaviour:
   StateName: Charge
   AnimationTrigger: 
   DefaultNextState: {fileID: 459641410}
+  IsPausable: 0
   SpeedMultiplier: 5
   chargeDuration: 2
   CastDuration: 0.5
-  ChargeCD: 2
+  ChargeCD: 10
   ChargeInCD: 0
 --- !u!114 &459641420
 MonoBehaviour:
@@ -794,6 +866,7 @@ MonoBehaviour:
   StateName: AttackMele
   AnimationTrigger: 
   DefaultNextState: {fileID: 459641410}
+  IsPausable: 1
   chargeDuration: 0.2
   ChargeCD: 0.8
   ChargeInCD: 0
@@ -812,6 +885,108 @@ MonoBehaviour:
   StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
+  IsPausable: 1
+  Paused: {fileID: 0}
+  debug1: {x: 0, y: 0, z: 0}
+  debug2: {x: 0, y: 0, z: 0}
+  debug3: {x: 0, y: 0, z: 0}
+--- !u!82 &459641422
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459641408}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &475881983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1297,7 @@ GameObject:
   - component: {fileID: 1283602727}
   - component: {fileID: 1283602726}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: MeleCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1837,10 +2012,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 7532965957473369615, guid: d0a77c6eb5808fb45ab13b668c715f90, type: 3}
-      propertyPath: CurrentWeapon.damage
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1860,3 +2031,4 @@ SceneRoots:
   - {fileID: 164326873}
   - {fileID: 643126010}
   - {fileID: 459641415}
+  - {fileID: 166168101}

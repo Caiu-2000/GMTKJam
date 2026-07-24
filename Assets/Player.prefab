@@ -240,7 +240,7 @@ MonoBehaviour:
     sounds:
     - soundName: 
       type: 5
-      soundClip: {fileID: 8300000, guid: 9ff0acec861a0fc43bea8f4da3cd3eec, type: 3}
+      soundClip: {fileID: 8300000, guid: b54f3d645fa1fbb4ebe651b2de1ba2d2, type: 3}
       AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
       volume: 0.5
       pitch: 1
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentWeapon:
-    damage: 2
+    damage: 0
     weaponSprite: {fileID: 0}
     HittboxSize: {x: 1.5, y: 1.5, z: 1.5}
     name: Hacha
