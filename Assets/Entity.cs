@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 [RequireComponent (typeof(Animator))]
+[RequireComponent(typeof(AudioSource))]
 public abstract class Entity : MonoBehaviour, IHittable
 {
 
@@ -18,6 +19,12 @@ public abstract class Entity : MonoBehaviour, IHittable
     [SerializeField] protected CombatComponnetnt _combat;
     [HideInInspector]public Animator _animator;
     private AiComponnent _aiComponnent;
+
+    [SerializeField]
+    protected EntitySoundComponent SoundEmmiter = new EntitySoundComponent();
+
+
+
     #region Delegates
 
     public delegate void HealthChange(float NewHealth, float MaxHealth);

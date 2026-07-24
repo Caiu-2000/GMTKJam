@@ -11,6 +11,7 @@ public class CombatComponnetnt : MonoBehaviour
     public bool FromPlayer = false;
 
     private bool CanAttack = true;
+    private Entity ControllingEntity;
     
 
     #region Debug
@@ -25,11 +26,13 @@ public class CombatComponnetnt : MonoBehaviour
     {
         _input.OnAttackPressed += Attack;
         FromPlayer = true;
+        ControllingEntity = GeneralHandler.player;
     }
-    public void InitialiceThis(StateMachine Machine)
+    public void InitialiceThis(StateMachine Machine , Enemy enemy)
     {
+        ControllingEntity = enemy;
         Machine.OnAttack += Attack;
-        print("Se llego bi en a machine");
+        
     }
 
     public void Attack( Vector3 AttackedGlobalPosition)
@@ -39,6 +42,7 @@ public class CombatComponnetnt : MonoBehaviour
         StartCoroutine(AttackCd());
         LastAttackedPos = AttackedGlobalPosition;
         StartCoroutine(AttackSecuence(AttackedGlobalPosition));
+        ControllingEntity.OnEntityAttacked?.Invoke();
 
     }
 

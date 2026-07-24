@@ -9,6 +9,7 @@ public class Player : Entity
     {
         GeneralHandler.player = this;
         _combat.InitialiceThis(input);
+        SoundEmmiter.InitializeThis(this);
         inventory = new Inventory();
     }
 

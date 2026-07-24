@@ -10,8 +10,8 @@ public class Enemy : Entity
         _ai = new AiComponnent(this);
         
         Machine.Initialice(this, _movement , _ai);
-        _combat.InitialiceThis(Machine);
-        
+        _combat.InitialiceThis(Machine , this);
+        SoundEmmiter.InitializeThis(this);
     }
 
 
