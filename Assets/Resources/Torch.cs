@@ -1,0 +1,25 @@
+using System.Collections;
+using UnityEngine;
+
+public class Torch : MonoBehaviour
+{
+    IsPlayerOnTheLight lightManager;
+    [SerializeField] Light torchLight;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    IEnumerator DeleteTorch()
+    {
+        yield return new WaitForSeconds(30f);
+        lightManager = GeneralHandler.Instance.GetLightManager();
+        lightManager.AddLight(torchLight);
+    }
+}

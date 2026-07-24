@@ -29,4 +29,6 @@ public class GeneralHandler : MonoBehaviour
     {
         lightChecker = script;
     }
+    public IsPlayerOnTheLight GetLightManager()
+        { return lightChecker; }
 }

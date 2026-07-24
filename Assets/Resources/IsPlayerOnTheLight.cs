@@ -19,7 +19,7 @@ public class IsPlayerOnTheLight : MonoBehaviour
         if (activeLights.Count == 0) return;
         foreach (Light light in activeLights)
         {
-            if (Vector3.Distance(player.transform.position, light.transform.position) <= light.range && light.enabled)
+            if (Vector3.Distance(player.transform.position, light.transform.position) <= light.range/3 && light.enabled)
             {
                 isPlayerInRange = true;
                 break;
@@ -45,8 +45,9 @@ public class IsPlayerOnTheLight : MonoBehaviour
     }
     IEnumerator TakeDamage()
     {
+        Hitt test = new Hitt();
         damageCd = true;
-        player.applyDamage(5f);
+        player.applyDamage(5f, test);
         yield return new WaitForSeconds(1.5f);
         damageCd = false;
     }
