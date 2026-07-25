@@ -1,6 +1,6 @@
 
 using System.Collections;
-
+using System.ComponentModel.Design;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,16 +9,18 @@ public class UiHandler : MonoBehaviour
     
     private Player _player;
     [SerializeField] private Image _lifeBar;
+    [SerializeField] private Image _fireBar;
 
     private float LastHealtValure = 1;
 
     [SerializeField] private Image ParryIndicator;
-
+    private bool FireplaceChecked = false;
 
 
     private void Update()
     {
         if (_player == null) CheckForPlayer();
+        if (!FireplaceChecked) CheckForFirePlace();
     }
 
     private void CheckForPlayer()
@@ -35,7 +37,14 @@ public class UiHandler : MonoBehaviour
         }
 
     }
-
+    private void CheckForFirePlace()
+    {
+        if (GeneralHandler.Campfire)
+        {
+            FireplaceChecked = true;
+            GeneralHandler.Campfire.OnFuelChanged += UpdateFireProgress;
+        }
+    }
     public void UpdateLife(float current, float max)
     {
 
@@ -48,7 +57,8 @@ public class UiHandler : MonoBehaviour
     }
     public void UpdateFireProgress(float current , float max)
     {
-
+        print(current);
+        _fireBar.fillAmount = (current / max);
     }
 
 

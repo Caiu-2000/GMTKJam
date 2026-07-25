@@ -19,5 +19,9 @@ public class Player : Entity
         _combat.ChangeWeapon(newWeapon);
     }
 
+    public override void Die()
+    {
+        GM.PlayerDied();
+    }
 
 }

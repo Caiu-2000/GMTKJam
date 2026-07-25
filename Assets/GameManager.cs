@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GM
 {
@@ -7,5 +8,11 @@ public class GM
     {
         Vector3 direction = Vector3.Normalize(to - from);
         return new Vector2(direction.x,direction.z);
+    }
+
+
+    public static void PlayerDied()
+    {
+        SceneManager.LoadScene(SceneManager.sceneCount);
     }
 }
