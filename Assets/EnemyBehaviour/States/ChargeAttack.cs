@@ -22,7 +22,7 @@ public class ChargeAttack : State
     protected virtual IEnumerator chargeSecuence()
     {
         // TRIGUEREAR ANIMACION
-        print("Esperando");
+    
         ParentMachine._movement.Move(new Vector2(0,0));
         float elapsedTime = 0;
         Vector3 scapeDir = ParentMachine._ai.DirectionTowards(objective.position) * -1;
@@ -40,7 +40,7 @@ public class ChargeAttack : State
         
         }
         ParentMachine._movement.Speed = OldSpeed;
-        print("Termino la espera");
+     
         ParentMachine._movement.Speed *= SpeedMultiplier * 2 ;
         elapsedTime = 0;
         Vector3 ChargeDirection = ParentMachine._ai.DirectionTowards(objective.position);

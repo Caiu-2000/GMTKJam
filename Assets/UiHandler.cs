@@ -25,7 +25,7 @@ public class UiHandler : MonoBehaviour
 
     private void CheckForPlayer()
     {
-        print("Estoy buscando al player");
+   
         GeneralHandler.UiHandler= this;
 
         _player = GeneralHandler.player;

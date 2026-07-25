@@ -49,13 +49,13 @@ public class Enemy : Entity
     {
         if (GeneralHandler.DamageBuffed)
         {
-            print("Damage buffeado");
+           
             damage = damage * 2;
 
         }
         if (_damCD)
         {
-            print("Se intento golpear pero estaba en cd");
+       
             return;
         }
         StartCoroutine(DamCd());
@@ -73,4 +73,4 @@ public class Enemy : Entity
 }
 
 
-}
+

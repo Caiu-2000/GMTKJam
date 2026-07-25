@@ -78,7 +78,7 @@ public class campfireFlicker : MonoBehaviour
     }
     public void RemoveFuel(float amout)
     {
-        Debug.Log("Se saco combustible");
+  
         StopCoroutine(dimLightRoutine);
         baseIntensity -= amout;
         float newTime = baseIntensity * 0.6f;

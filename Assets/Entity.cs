@@ -100,6 +100,7 @@ public abstract class Entity : MonoBehaviour, IHittable
     {
         _currentLife += _healAmount;
         if (_currentLife > _maxLife) _currentLife = _maxLife;
+        OnHealthChanged?.Invoke(_currentLife , _maxLife);
     }
 
 

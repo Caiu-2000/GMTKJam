@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GeneralHandler : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class GeneralHandler : MonoBehaviour
     public static DashCOmponnent Dash;
     public IsPlayerOnTheLight lightChecker;
 
+    public static HealBuff Heatlbuff;
+
     public static bool DamageBuffed = false;
+    public static DamageUpgrade DamageBuff;
 
     private void Awake()
     {
@@ -41,12 +45,37 @@ public class GeneralHandler : MonoBehaviour
     }
     public void ImprovedBasics()
     {
-        //TODO: player.ImproveBasics();
+        DamageBuff.Unlock();
     }
     public void TurnOnReneration()
     {
-        //TODO: player.TurnOnReneration();
+        Heatlbuff.Unlock();
     }
     public IsPlayerOnTheLight GetLightManager()
         { return lightChecker; }
+
+
+    private void Update()
+    {
+#if UNITY_EDITOR
+        // Detecta las teclas del teclado numérico (Numpad) o los números del teclado principal
+        if (Keyboard.current.numpad4Key.wasPressedThisFrame)
+            {
+            print("Dash");
+                TurnDashOn();
+            }
+            else if (Keyboard.current.numpad5Key.wasPressedThisFrame)
+            {
+            print("Dam");
+            ImprovedBasics();
+            }
+            else if (Keyboard.current.numpad6Key.wasPressedThisFrame)
+            {
+            print("Regen");
+            TurnOnReneration();
+            }
+#endif
+    }
+
+
 }

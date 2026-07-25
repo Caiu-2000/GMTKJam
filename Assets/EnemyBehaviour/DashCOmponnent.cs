@@ -16,7 +16,7 @@ public class DashCOmponnent : MonoBehaviour
  
     private void Dash()
     {
-        print("SE llamo dash");
+
         if (CanDash) StartCoroutine(DashSecuence());
     }
 
@@ -26,6 +26,7 @@ public class DashCOmponnent : MonoBehaviour
     {
         CanDash = true;
         GeneralHandler.player.input.OnDashPressed += Dash;
+        DashLinked = true;
     }
     
 
@@ -67,11 +68,7 @@ public class DashCOmponnent : MonoBehaviour
         Vector2 auxiliar = LastWalkedDirection;
         LastWalkedDirection = GeneralHandler.player.input.GetMoveDir();
         if (LastWalkedDirection ==  Vector2.zero ) { LastWalkedDirection = auxiliar; }
-        if (!DashLinked) { 
-            GeneralHandler.Dash = this;
-            GeneralHandler.player.input.OnDashPressed += Dash;
-            DashLinked = true;
-        }
+        
     }
     private void FixedUpdate()
     {
@@ -82,6 +79,6 @@ public class DashCOmponnent : MonoBehaviour
     //BORRAAAAAR
     private void Start()
     {
-        CanDash = true;
+        GeneralHandler.Dash = this;
     }
 }

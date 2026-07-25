@@ -33,7 +33,7 @@ public class DamagedState : State
         while (true)
         {
             elapsedTime += Time.deltaTime;
-            print(_hittData.AttackFrom);
+          
             ParentMachine._movement.Move(GM.OppositeDirection(_hittData.AttackFrom , this.transform.position) * 3.0f);
 
             debug1 = GM.OppositeDirection(_hittData.AttackFrom, this.transform.position);

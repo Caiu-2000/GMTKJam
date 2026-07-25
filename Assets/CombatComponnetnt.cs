@@ -37,7 +37,7 @@ public class CombatComponnetnt : MonoBehaviour
 
     public void Attack( Vector3 AttackedGlobalPosition)
     {
-        print("Se llamo attack");
+     
         if (!CanAttack) { return; }
         StartCoroutine(AttackCd());
         LastAttackedPos = AttackedGlobalPosition;
@@ -67,7 +67,7 @@ public class CombatComponnetnt : MonoBehaviour
                     
                     if (FromPlayer && collider.gameObject.GetComponent<Player>() ) continue;
                     if (!FromPlayer && collider.gameObject.GetComponent<Enemy>()) continue;
-                    print("COnsegui llegar aca con collider de + " + collider.gameObject.name);
+                  
                     ApplyAttack(collider);
                 }
             

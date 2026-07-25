@@ -12,7 +12,7 @@ public class Player : Entity
         SoundEmmiter.InitializeThis(this);
         inventory = new Inventory();
  
-        print(_movement.Speed);
+ 
     }
 
     public void Update()
