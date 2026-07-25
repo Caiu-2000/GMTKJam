@@ -1,4 +1,7 @@
+using System;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [System.Serializable]
 public class MovementComponent 
@@ -16,6 +19,7 @@ public class MovementComponent
 
     public void Move(Vector2 moveDir)
     {
+        Debug.Log(Speed);
         _RB.linearVelocity = new Vector3(moveDir.x , 0 , moveDir.y)  * Speed;
     }
 }

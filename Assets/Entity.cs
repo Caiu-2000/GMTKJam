@@ -15,7 +15,7 @@ public abstract class Entity : MonoBehaviour, IHittable
     public float _maxStamina = 100.0f, _currentStamina = 0.0f;
     public float _StaminaCD = 1f, _StaminaCount = 0, _StaminaRegen = 25f;
 
-    [SerializeField] protected MovementComponent _movement;
+    [SerializeField] public MovementComponent _movement;
     [SerializeField] protected CombatComponnetnt _combat;
     [HideInInspector]public Animator _animator;
     private AiComponnent _aiComponnent;

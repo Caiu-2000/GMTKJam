@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    [SerializeField] private PlayerInput input;
+    [SerializeField] public PlayerInput input;
     public Inventory inventory;
     
     private void Start()

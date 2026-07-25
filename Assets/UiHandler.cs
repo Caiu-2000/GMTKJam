@@ -57,7 +57,7 @@ public class UiHandler : MonoBehaviour
     }
     public void UpdateFireProgress(float current , float max)
     {
-        print(current);
+        //print(current);
         _fireBar.fillAmount = (current / max);
     }
 

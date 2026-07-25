@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 public class PlayerInput : MonoBehaviour
 {
     
-    private InputAction _useAction, _useItemAction, _movementAction, _lookAction, _attackAction, _interactAction, _blockAction, _rightClickAction;
+    private InputAction _useAction, _dashAction, _movementAction, _lookAction, _attackAction, _interactAction, _blockAction, _rightClickAction;
     private InputAction _parryAction;
     
     Vector2 _dir = Vector2.zero;
@@ -25,6 +25,8 @@ public class PlayerInput : MonoBehaviour
     public delegate void JumpPress();
     public delegate void UseAction();
     public delegate void Parry();
+    public delegate void Dash();
+
 
     public AttacksDelegate OnAttackPressed = delegate { };
     public AttacksDelegate OnAttackReleased = delegate { };
@@ -33,6 +35,7 @@ public class PlayerInput : MonoBehaviour
     public UseAction OnUsePressed = delegate { };
     public UseAction OnUseItemPressed = delegate { };
 
+    public Dash OnDashPressed = delegate {  } ;
 
     public Parry OnParryPressed = delegate { };
 
@@ -52,7 +55,7 @@ public class PlayerInput : MonoBehaviour
         _useAction = InputSystem.actions.FindAction("Use");
      
         _rightClickAction = InputSystem.actions.FindAction("SecondClick");
-
+        _dashAction = InputSystem.actions.FindAction("DASH");
        
 
 
@@ -71,12 +74,13 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawLine(Camera.main.transform.position, currentWorldPosition, Color.green);
     
 
-        _dir = _movementAction.ReadValue<Vector2>();
+        
 
 
 
         if (CanInputActions)
         {
+            _dir = _movementAction.ReadValue<Vector2>();
             if (_attackAction.WasPressedThisFrame())
             {
 
@@ -95,6 +99,7 @@ public class PlayerInput : MonoBehaviour
             {
 
             }
+            if( _dashAction.WasPressedThisFrame()) { OnDashPressed?.Invoke(); }
 
         }
 
@@ -125,6 +130,10 @@ public class PlayerInput : MonoBehaviour
     {
 
        _movement.Move(_dir);
+    }
+    public Vector2 GetMoveDir()
+    {
+        return _dir;
     }
 
     public void DeactivateActions()

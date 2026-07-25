@@ -8,6 +8,7 @@ public class Enemy : Entity
     [SerializeField] private StateMachine Machine;
     private AiComponnent _ai;
     [SerializeField] private enemyLoot Loot;
+    [SerializeField] private int GoldLooteable = 1;
     private void Start()
     {
         _ai = new AiComponnent(this);
@@ -36,10 +37,12 @@ public class Enemy : Entity
         if (Loot == enemyLoot.GASPARIN)
         {
             GeneralHandler.player.inventory.AddLootEspectro(1);
+
         }
         else if (Loot == enemyLoot.OJO)
         {
             GeneralHandler.player.inventory.AddLootOjo(1);
         }
+        GeneralHandler.player.inventory.AddGold(GoldLooteable);
     }
 }

@@ -10,6 +10,7 @@ public class GeneralHandler : MonoBehaviour
     public static Player player;
     public static campfireFlicker Campfire;
     public static UiHandler UiHandler;
+    public static DashCOmponnent Dash;
     public IsPlayerOnTheLight lightChecker;
     private void Awake()
     {
@@ -33,7 +34,7 @@ public class GeneralHandler : MonoBehaviour
     }
     public void TurnDashOn()
     {
-        //TODO: player.turnDashOn();
+        Dash.ActivateDash();
     }
     public void ImprovedBasics()
     {
