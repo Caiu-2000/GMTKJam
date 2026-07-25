@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6674248993439301865}
   - component: {fileID: 6424890183355418530}
   - component: {fileID: 7666582013376289813}
+  - component: {fileID: 4068492740227261047}
+  - component: {fileID: 2693242559872396265}
+  - component: {fileID: 3662278154055801188}
   m_Layer: 0
   m_Name: robleAdulto
   m_TagString: Untagged
@@ -26,9 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7031952936289421172}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.951645, y: 0.00000047683716, z: 8.928225}
-  m_LocalScale: {x: 0.0068887, y: 0.0068887, z: 0.0068887}
+  m_LocalScale: {x: 0.023876235, y: 0.023876235, z: 0.023876235}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,3 +89,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4068492740227261047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031952936289421172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d561113c366d1aa4db8ef4259b86cfd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 12
+  woodToGive: 10
+--- !u!65 &2693242559872396265
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031952936289421172}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 576.1673, y: 925.33496, z: 953.4764}
+  m_Center: {x: 0, y: 422.99182, z: 56.844757}
+--- !u!136 &3662278154055801188
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7031952936289421172}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 123.9
+  m_Height: 925.33496
+  m_Direction: 1
+  m_Center: {x: 40.2, y: 378, z: 41.2}
