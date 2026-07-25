@@ -31,7 +31,7 @@ public class campfireFlicker : MonoBehaviour
     void Update()
     {
         float noise = Mathf.PerlinNoise(seed, Time.time * noiseSpeed);
-        flameLight.intensity = (baseIntensity + (noise - 0.5f) * 2f * intensityVariance)*intensityMultiplier;
+        flameLight.intensity = baseIntensity * intensityMultiplier;//(baseIntensity + (noise - 0.5f) * 2f * intensityVariance)*intensityMultiplier;
         if (baseIntensity <= 0) flameLight.enabled = false;
         if (Keyboard.current.numpad1Key.wasPressedThisFrame) AddFuel(3);
         if (Keyboard.current.numpad2Key.wasPressedThisFrame) RemoveFuel(1);
