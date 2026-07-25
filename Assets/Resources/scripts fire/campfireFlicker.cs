@@ -12,6 +12,7 @@ public class campfireFlicker : MonoBehaviour
     Coroutine dimLightRoutine;
     float seed;
     int currentTier = 0;
+    [SerializeField]GameObject[] campfireModels;
     float intensityMultiplier = 1f;
     public float MaxFuel = 150;
 
@@ -38,8 +39,11 @@ public class campfireFlicker : MonoBehaviour
 
     public void Upgrade()
     {
-        if (currentTier >= upgradeData.maxTier) return;
+        if (currentTier > upgradeData.maxTier) return;
+        if (currentTier == 2) return;
+        campfireModels[currentTier].SetActive(false);
         currentTier++;
+        campfireModels[currentTier].SetActive(true);
         ApplyTier(currentTier);
     }
 
