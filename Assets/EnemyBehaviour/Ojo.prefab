@@ -432,7 +432,7 @@ MonoBehaviour:
   StateName: Charge
   AnimationTrigger: 
   DefaultNextState: {fileID: 8847613788818623343}
-  IsPausable: 1
+  IsPausable: 0
   SpeedMultiplier: 3
   chargeDuration: 1
   CastDuration: 0.25
@@ -474,7 +474,7 @@ MonoBehaviour:
   StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 1812521508084607790}
-  IsPausable: 0
+  IsPausable: 1
   RangeForAttack: 3
   ChargeState: {fileID: 1812521508084607790}
   Attack: {fileID: 0}

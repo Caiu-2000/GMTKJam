@@ -13,7 +13,13 @@ public class campfireFlicker : MonoBehaviour
     float seed;
     int currentTier = 0;
     float intensityMultiplier = 1f;
-    public float MaxValue;
+    public float MaxFuel = 150;
+
+    public delegate void FuelChanged(float currentValue , float MaxValue);
+
+    public FuelChanged OnFuelChanged;
+
+
     void Awake() => seed = Random.value*100f;
     private void Start()
     {
@@ -50,9 +56,11 @@ public class campfireFlicker : MonoBehaviour
         {
             baseIntensity = Mathf.Lerp(startValue, endValue, timeElapsed / duration);
             timeElapsed += Time.deltaTime;
+            OnFuelChanged?.Invoke(baseIntensity, MaxFuel);
             yield return null;
         }
         baseIntensity = endValue;
+        
     }
     public void AddFuel(float amout)
     {
@@ -62,6 +70,7 @@ public class campfireFlicker : MonoBehaviour
         float newTime = baseIntensity * 0.6f; //Como el base de 100 toma 1 minuto (60 seg) en apagarse base 1 toma 0.6 seg
         if(flameLight.enabled == false) flameLight.enabled = true;
         dimLightRoutine = StartCoroutine(DimLight(baseIntensity, 0f, newTime));
+        
     }
     public void RemoveFuel(float amout)
     {
