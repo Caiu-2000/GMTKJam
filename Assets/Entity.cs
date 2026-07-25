@@ -53,8 +53,11 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     public virtual void applyDamage(float damage , Hitt attack)
     {
-        if (_damCD) return;
-
+        if (_damCD)
+        {
+            print("Se intento golpear pero estaba en cd");
+            return;
+        }
         StartCoroutine(DamCd());
         if (_currentLife == 0) _currentLife = _maxLife;
         _currentLife -= damage;
@@ -102,13 +105,13 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     public void Hitt(Hitt hitt)
     {
-        print(hitt.AttackFrom);
+      
         applyDamage(hitt.HittDamage , hitt );
     }
 
 
 
-    private IEnumerator DamCd()
+    protected IEnumerator DamCd()
     {
         _damCD = true;
         yield return new WaitForSeconds(0.1f);

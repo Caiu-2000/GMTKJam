@@ -45,4 +45,32 @@ public class Enemy : Entity
         }
         GeneralHandler.player.inventory.AddGold(GoldLooteable);
     }
+    public override void applyDamage(float damage, Hitt attack)
+    {
+        if (GeneralHandler.DamageBuffed)
+        {
+            print("Damage buffeado");
+            damage = damage * 2;
+
+        }
+        if (_damCD)
+        {
+            print("Se intento golpear pero estaba en cd");
+            return;
+        }
+        StartCoroutine(DamCd());
+        if (_currentLife == 0) _currentLife = _maxLife;
+        _currentLife -= damage;
+        OnDamaged?.Invoke(attack);
+        OnHealthChanged?.Invoke(_currentLife, _maxLife);
+        if (_currentLife <= 0)
+        {
+            Die();
+        }
+
+
+    }
+}
+
+
 }

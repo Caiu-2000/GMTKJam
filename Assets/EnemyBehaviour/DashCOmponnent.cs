@@ -35,14 +35,18 @@ public class DashCOmponnent : MonoBehaviour
         GeneralHandler.player.input.DeactivateActions();
         float AuxiliarSpeed = GeneralHandler.player._movement.Speed;
         float elapsedTime = 0;
-        GeneralHandler.player._movement.Speed = DashStrength;
+        
         CanDash = false;
         while (true)
         {
             elapsedTime += Time.deltaTime;
+            GeneralHandler.player.transform.position = Vector3.MoveTowards(GeneralHandler.player.transform.position, GeneralHandler.player.transform.position + new Vector3(DirectionReference.x, 0, DirectionReference.y) * DashStrength, elapsedTime / DashDuration);
             
+            
+            /*
             GeneralHandler.player._movement.Move(DirectionReference);
             GeneralHandler.player._damCD = true;
+            */
             if (elapsedTime > DashDuration) break;
             yield return null;
 

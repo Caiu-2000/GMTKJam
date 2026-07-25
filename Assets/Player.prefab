@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 2410944949397348847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 20.2, z: -9.8}
+  m_LocalPosition: {x: 0.3, y: 20.2, z: -16.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -356,8 +356,8 @@ MonoBehaviour:
   _StaminaRegen: 25
   _movement:
     _RB: {fileID: 6267968158093358747}
-    _parentEntity: {fileID: 0}
-    Speed: 3
+    _parentEntity: {fileID: 7529786451816998552}
+    Speed: 25
   _combat: {fileID: 7532965957473369615}
   _animator: {fileID: 0}
   SoundEmmiter:
@@ -374,6 +374,7 @@ MonoBehaviour:
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
   input: {fileID: 7930604962453865310}
+  PlayerSpeed: 50
 --- !u!114 &7930604962453865310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentWeapon:
-    damage: 0
+    damage: 1
     weaponSprite: {fileID: 0}
     HittboxSize: {x: 1.5, y: 1.5, z: 1.5}
     name: Hacha
@@ -576,8 +577,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f89d31468b4c60841807a5c93335a08b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DashStrength: 10
-  DashDuration: 0.25
+  CanDash: 0
+  DashStrength: 4
+  DashDuration: 0.1
+  DashLinked: 0
 --- !u!1 &4777944877343073205
 GameObject:
   m_ObjectHideFlags: 0

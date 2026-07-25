@@ -12,6 +12,9 @@ public class GeneralHandler : MonoBehaviour
     public static UiHandler UiHandler;
     public static DashCOmponnent Dash;
     public IsPlayerOnTheLight lightChecker;
+
+    public static bool DamageBuffed = false;
+
     private void Awake()
     {
      
