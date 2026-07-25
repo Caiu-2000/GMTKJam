@@ -1,10 +1,9 @@
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
-public class Anvil : MonoBehaviour, IInteractable
+public class Altar : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject panel;
-    public string InteractMessage => "Improve your axe";
+    public string InteractMessage => "Improve yourself";
 
     public void Interact()
     {

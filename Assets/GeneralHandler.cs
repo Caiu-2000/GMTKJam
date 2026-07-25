@@ -31,6 +31,18 @@ public class GeneralHandler : MonoBehaviour
     {
         lightChecker = script;
     }
+    public void TurnDashOn()
+    {
+        //TODO: player.turnDashOn();
+    }
+    public void ImprovedBasics()
+    {
+        //TODO: player.ImproveBasics();
+    }
+    public void TurnOnReneration()
+    {
+        //TODO: player.TurnOnReneration();
+    }
     public IsPlayerOnTheLight GetLightManager()
         { return lightChecker; }
 }
