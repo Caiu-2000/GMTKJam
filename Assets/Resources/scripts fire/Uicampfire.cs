@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Uicampfire : MonoBehaviour
 {
     [SerializeField]campfireFlicker campfire;
+    [SerializeField] GameObject torch;
     
     // Update is called once per frame
     void Update()
@@ -20,6 +21,10 @@ public class Uicampfire : MonoBehaviour
                 campfire.AddFuel(30);
                 player.inventory.RemoveLogs(1);
             }
+        }
+        if (Keyboard.current.uKey.wasPressedThisFrame && torch.activeSelf == false)
+        {
+            torch.SetActive(true);
         }
     }
 }
