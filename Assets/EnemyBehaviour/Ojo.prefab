@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 6608886043800936607}
   - component: {fileID: 262276131856806081}
   - component: {fileID: 8710736664375351555}
+  - component: {fileID: 1812521508084607790}
   - component: {fileID: 3788661462701611094}
   - component: {fileID: 955228365825338423}
   - component: {fileID: 8847613788818623343}
@@ -254,6 +255,7 @@ Transform:
   - {fileID: 456743242451818307}
   - {fileID: 891199724600579259}
   - {fileID: 5084331038024847346}
+  - {fileID: 5010650956544180458}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5633915369398564797
@@ -320,7 +322,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -388,6 +390,7 @@ MonoBehaviour:
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
   Machine: {fileID: 8710736664375351555}
+  Loot: 0
 --- !u!114 &8710736664375351555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,10 +404,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statesList:
-  - {fileID: 955228365825338423}
+  - {fileID: 1812521508084607790}
   - {fileID: 3788661462701611094}
+  - {fileID: 955228365825338423}
   - {fileID: 8847613788818623343}
-  CurrentState: {fileID: 0}
+  CurrentState: {fileID: 955228365825338423}
   DefaultState: {fileID: 955228365825338423}
   DeathState: {fileID: 8847613788818623343}
   _damaged: {fileID: 3788661462701611094}
@@ -413,6 +417,28 @@ MonoBehaviour:
     _parentEntity: {fileID: 0}
     Speed: 0
   DebugText: {fileID: 1690255091965770318}
+--- !u!114 &1812521508084607790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d8e6a0e765b5043895d14e61575152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateName: Charge
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 8847613788818623343}
+  IsPausable: 1
+  SpeedMultiplier: 3
+  chargeDuration: 1
+  CastDuration: 0.25
+  ChargeCD: 0
+  ChargeInCD: 0
+  objective: {fileID: 0}
 --- !u!114 &3788661462701611094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,10 +473,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StateName: 
   AnimationTrigger: 
-  DefaultNextState: {fileID: 0}
-  IsPausable: 1
-  RangeForAttack: 1
-  ChargeState: {fileID: 0}
+  DefaultNextState: {fileID: 1812521508084607790}
+  IsPausable: 0
+  RangeForAttack: 3
+  ChargeState: {fileID: 1812521508084607790}
   Attack: {fileID: 0}
   ChaseFire: 0
 --- !u!114 &8847613788818623343
@@ -469,7 +495,6 @@ MonoBehaviour:
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 0
-  Loot: 2
 --- !u!82 &2827504273406414108
 AudioSource:
   m_ObjectHideFlags: 0
@@ -567,6 +592,74 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &4515107169014108741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5010650956544180458}
+  - component: {fileID: 4388511939247165958}
+  - component: {fileID: 605276111523514333}
+  m_Layer: 0
+  m_Name: CampfireDetector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5010650956544180458
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515107169014108741}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 665524840942588311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &4388511939247165958
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515107169014108741}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &605276111523514333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515107169014108741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 806022785cf8ecb42b32c6f528342450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageToCampfire: 5
+  Parent: {fileID: 4412643127566618072}
 --- !u!1 &8113026964324327088
 GameObject:
   m_ObjectHideFlags: 0
