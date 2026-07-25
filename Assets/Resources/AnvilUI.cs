@@ -5,7 +5,7 @@ public class AnvilUI : MonoBehaviour
 {
     Player player;
     int nextWeapon = 0;
-    int maxWeapon = 2;
+    int maxWeapon = 3;
     [SerializeField]Tool[] weapon;
     void Start()
     {
@@ -18,7 +18,8 @@ public class AnvilUI : MonoBehaviour
         if(player == null)player = GeneralHandler.Instance.GetPlayer();
         if (Keyboard.current.tKey.wasPressedThisFrame && nextWeapon <maxWeapon)
         { 
-            player.ChangeWeapon(weapon[nextWeapon]); 
+            player.ChangeWeapon(weapon[nextWeapon]);
+            nextWeapon++;
             gameObject.SetActive(false);
         }
     }
