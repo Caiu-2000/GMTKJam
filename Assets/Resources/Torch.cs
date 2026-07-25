@@ -10,7 +10,12 @@ public class Torch : MonoBehaviour
     {
         
     }
-
+    private void OnEnable()
+    {
+        lightManager = GeneralHandler.Instance.GetLightManager();
+        lightManager.AddLight(torchLight);
+        StartCoroutine(DeleteTorch());
+    }
     // Update is called once per frame
     void Update()
     {
@@ -19,7 +24,7 @@ public class Torch : MonoBehaviour
     IEnumerator DeleteTorch()
     {
         yield return new WaitForSeconds(30f);
-        lightManager = GeneralHandler.Instance.GetLightManager();
-        lightManager.AddLight(torchLight);
+        lightManager.RemoveLight(torchLight);
+        gameObject.SetActive(false);
     }
 }
