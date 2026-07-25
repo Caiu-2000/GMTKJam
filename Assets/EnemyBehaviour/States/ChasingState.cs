@@ -2,12 +2,18 @@ using UnityEngine;
 
 public class ChasingState : State
 {
-    [SerializeField] float RangeForAttack = 1.0f;
+    [SerializeField] protected float RangeForAttack = 1.0f;
 
-    [SerializeField] private ChargeAttack ChargeState;
+    [SerializeField] protected ChargeAttack ChargeState;
    
     [SerializeField] private AttackMeleState Attack;
+    [SerializeField] private bool ChaseFire;
 
+    public override void StartState()
+    {
+        base.StartState();
+        ChargeState.objective = GeneralHandler.player.transform;
+    }
     public override void UpdateState()
     {
         ParentMachine._movement.Move(ParentMachine._ai.DirectionTowards(GeneralHandler.player.transform.position));

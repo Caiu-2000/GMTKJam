@@ -9,6 +9,7 @@ public class ChargeAttack : State
     [SerializeField] float ChargeCD;
     public bool ChargeInCD = false;
 
+    public Transform objective;
 
     private float OldSpeed;
     public override void StartState()
@@ -27,7 +28,7 @@ public class ChargeAttack : State
         print("Termino la espera");
         ParentMachine._movement.Speed *= SpeedMultiplier ;
         float elapsedTime = 0;
-        Vector3 ChargeDirection = ParentMachine._ai.DirectionTowards(GeneralHandler.player.transform.position);
+        Vector3 ChargeDirection = ParentMachine._ai.DirectionTowards(objective.position);
         while (elapsedTime < CastDuration)
         {
             ParentMachine._movement.Move(ChargeDirection);

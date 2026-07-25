@@ -18,6 +18,7 @@ public class campfireFlicker : MonoBehaviour
     private void Start()
     {
         dimLightRoutine = StartCoroutine(DimLight(baseIntensity, 0f, 60f));
+        GeneralHandler.Campfire = this;
         ApplyTier(currentTier);
     }
     void Update()

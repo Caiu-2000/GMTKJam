@@ -6,6 +6,7 @@ public class Hoguera : MonoBehaviour, IInteractable
     [SerializeField]GameObject panel;
     public void Start()
     {
+       
         fuelManager =GetComponent<campfireFlicker>();
     }
     void Update()
