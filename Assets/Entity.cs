@@ -59,6 +59,7 @@ public abstract class Entity : MonoBehaviour, IHittable
         if (_currentLife == 0) _currentLife = _maxLife;
         _currentLife -= damage;
         OnDamaged?.Invoke(attack);
+        OnHealthChanged?.Invoke(_currentLife, _maxLife);
         if (_currentLife <= 0)
         {
             Die();

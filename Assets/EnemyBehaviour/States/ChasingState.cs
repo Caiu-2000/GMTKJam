@@ -2,14 +2,22 @@ using UnityEngine;
 
 public class ChasingState : State
 {
-    [SerializeField] float RangeForAttack = 1.0f;
+    [SerializeField] protected float RangeForAttack = 1.0f;
 
-    [SerializeField] private ChargeAttack ChargeState;
+    [SerializeField] protected ChargeAttack ChargeState;
    
     [SerializeField] private AttackMeleState Attack;
+    [SerializeField] private bool ChaseFire;
 
+    public override void StartState()
+    {
+        base.StartState();
+        
+    
+    }
     public override void UpdateState()
     {
+        if (ChargeState.objective == null) { ChargeState.objective = GeneralHandler.player.transform; }
         ParentMachine._movement.Move(ParentMachine._ai.DirectionTowards(GeneralHandler.player.transform.position));
 
         if (Vector3.Distance(this.transform.position, GeneralHandler.player.transform.position) < RangeForAttack)

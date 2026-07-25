@@ -13,11 +13,12 @@ public class campfireFlicker : MonoBehaviour
     float seed;
     int currentTier = 0;
     float intensityMultiplier = 1f;
-
+    public float MaxValue;
     void Awake() => seed = Random.value*100f;
     private void Start()
     {
         dimLightRoutine = StartCoroutine(DimLight(baseIntensity, 0f, 60f));
+        GeneralHandler.Campfire = this;
         ApplyTier(currentTier);
     }
     void Update()

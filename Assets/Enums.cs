@@ -15,3 +15,13 @@ public enum SoundTypes
     PlayingMusic
 
 }
+
+
+
+
+public enum enemyLoot
+{
+    NONE,
+    GASPARIN,
+    OJO
+}

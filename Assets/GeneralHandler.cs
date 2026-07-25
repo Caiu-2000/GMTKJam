@@ -8,6 +8,8 @@ public class GeneralHandler : MonoBehaviour
     public static GeneralHandler Instance { get; private set; }
     public static Vector3 MouseWorldPosition;
     public static Player player;
+    public static campfireFlicker Campfire;
+    public static UiHandler UiHandler;
     public IsPlayerOnTheLight lightChecker;
     private void Awake()
     {
