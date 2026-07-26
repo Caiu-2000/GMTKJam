@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DamageUpgrade : MonoBehaviour
 {
-    private bool IsReady = false;
+    public bool IsReady = false;
     [SerializeField] private float BuffDuration = 3.0f;
 
 
