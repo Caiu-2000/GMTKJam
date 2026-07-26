@@ -139,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 2116413410087781542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.46, z: 0}
+  m_LocalPosition: {x: 0, y: 2.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -267,6 +267,8 @@ GameObject:
   - component: {fileID: 6144065248091072700}
   - component: {fileID: 7293649077597415158}
   - component: {fileID: 8734829225744382142}
+  - component: {fileID: 3362511717989238220}
+  - component: {fileID: 9097794508911000385}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -438,6 +440,8 @@ MonoBehaviour:
   - {fileID: 8734829225744382142}
   - {fileID: 6144065248091072700}
   - {fileID: 7293649077597415158}
+  - {fileID: 3362511717989238220}
+  - {fileID: 9097794508911000385}
   CurrentState: {fileID: 0}
   DefaultState: {fileID: 6144065248091072700}
   DeathState: {fileID: 0}
@@ -560,8 +564,8 @@ MonoBehaviour:
   DefaultNextState: {fileID: 0}
   IsPausable: 1
   RangeForAttack: 1
-  ChargeState: {fileID: 0}
-  Attack: {fileID: 0}
+  ChargeState: {fileID: 9097794508911000385}
+  Attack: {fileID: 3362511717989238220}
   ChaseFire: 0
 --- !u!114 &7293649077597415158
 MonoBehaviour:
@@ -594,6 +598,45 @@ MonoBehaviour:
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 1
+--- !u!114 &3362511717989238220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1931c00f1e5097149be814845e067ec1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationTrigger: Attack
+  DefaultNextState: {fileID: 0}
+  IsPausable: 1
+  chargeDuration: 0
+  ChargeCD: 0
+  ChargeInCD: 0
+--- !u!114 &9097794508911000385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d8e6a0e765b5043895d14e61575152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationTrigger: Dash
+  DefaultNextState: {fileID: 0}
+  IsPausable: 1
+  SpeedMultiplier: 3
+  chargeDuration: 0.75
+  CastDuration: 5
+  ChargeCD: 10
+  ChargeInCD: 0
+  objective: {fileID: 0}
 --- !u!1 &8113026964324327088
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,7 +987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5738692751453505466, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.39
+      value: 4.23
       objectReference: {fileID: 0}
     - target: {fileID: 5738692751453505466, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

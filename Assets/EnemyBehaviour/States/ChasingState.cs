@@ -17,7 +17,16 @@ public class ChasingState : State
     }
     public override void UpdateState()
     {
-        if(ChargeState != null) if (ChargeState.objective == null) { ChargeState.objective = GeneralHandler.player.transform; }
+        if (ChargeState != null)
+        {
+            if (ChargeState.objective == null) { 
+                ChargeState.objective = GeneralHandler.player.transform;
+                print("Cargue objetivo");
+            }
+            print("Tengo charge");
+            
+        }
+    
         ParentMachine._movement.Move(ParentMachine._ai.DirectionTowards(GeneralHandler.player.transform.position));
 
         if (Vector3.Distance(this.transform.position, GeneralHandler.player.transform.position) < RangeForAttack)

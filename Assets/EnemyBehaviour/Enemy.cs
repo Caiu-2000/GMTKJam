@@ -9,6 +9,7 @@ public class Enemy : Entity
     protected AiComponnent _ai;
     [SerializeField] protected enemyLoot Loot;
     [SerializeField] private int GoldLooteable = 1;
+    
     private void Start()
     {
         _ai = new AiComponnent(this);
