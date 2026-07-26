@@ -324,7 +324,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -378,6 +378,7 @@ MonoBehaviour:
     Speed: 5
   _combat: {fileID: 6608886043800936607}
   _animator: {fileID: 5633915369398564797}
+  _SpriteAnimator: {fileID: 0}
   SoundEmmiter:
     _audioSource: {fileID: 2827504273406414108}
     sounds:
@@ -434,7 +435,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cd49f51dcfc4c45834a07cb54d852f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Chasing
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 1
@@ -454,14 +454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f09668684c23164aa7cb8527e38d529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 1
   Paused: {fileID: 0}
-  debug1: {x: 0, y: 0, z: 0}
-  debug2: {x: 0, y: 0, z: 0}
-  debug3: {x: 0, y: 0, z: 0}
 --- !u!114 &7538107384526274484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1931c00f1e5097149be814845e067ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: AttackMele
   AnimationTrigger: 
   DefaultNextState: {fileID: 6447024411372349469}
   IsPausable: 1
@@ -493,7 +488,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20d4e345494fa940955963552e01f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Patroll
   AnimationTrigger: 
   DefaultNextState: {fileID: 6447024411372349469}
   IsPausable: 1
@@ -510,7 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65352cf81140634fa822c46e2cb5938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Death
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 0
@@ -526,7 +519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d8e6a0e765b5043895d14e61575152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Charge
   AnimationTrigger: 
   DefaultNextState: {fileID: 6447024411372349469}
   IsPausable: 0
