@@ -29,18 +29,21 @@ public class AnvilUI : MonoBehaviour
             {
                 player.inventory.RemoveGold(10);
                 anvilScript.currentLevel++;
+                SoundManager.instance.Play(SoundTypes.UpgradeYunque);
             }
             else if (nextWeapon == 2)
             {
                 player.inventory.RemoveGold(15);
                 player.inventory.RemoveLootEspectro(5);
                 anvilScript.currentLevel++;
+                SoundManager.instance.Play(SoundTypes.UpgradeYunque);
             }
             else if (nextWeapon == 3)
             {
                 player.inventory.RemoveGold(25);
                 player.inventory.RemoveLootEspectro(10);
                 anvilScript.currentLevel++;
+                SoundManager.instance.Play(SoundTypes.UpgradeYunque);
             }
             print(campfire.currentTier);
             resourcesCheck = false;

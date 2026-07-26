@@ -16,6 +16,7 @@ public class AnvilBuild : MonoBehaviour
             objectToSpawn.SetActive(true);
             thisObject.SetActive(false);
             panel.SetActive(false);
+            SoundManager.instance.Play(SoundTypes.Construccion);
         }
         if (Keyboard.current.numpad9Key.wasPressedThisFrame)
         {

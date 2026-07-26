@@ -68,9 +68,11 @@ public class campfireFlicker : MonoBehaviour
     }
     public void AddFuel(float amout)
     {
-        Debug.Log("Se añadio combustible");
+        SoundManager.instance.Play(SoundTypes.Fuel);
+        
         if(dimLightRoutine != null) StopCoroutine(dimLightRoutine);
         baseIntensity += amout;
+        baseIntensity = Mathf.Min(150, baseIntensity);
         float newTime = baseIntensity * 0.6f; //Como el base de 100 toma 1 minuto (60 seg) en apagarse base 1 toma 0.6 seg
         if(flameLight.enabled == false) flameLight.enabled = true;
         dimLightRoutine = StartCoroutine(DimLight(baseIntensity, 0f, newTime));

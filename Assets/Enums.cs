@@ -12,7 +12,14 @@ public enum SoundTypes
     Death,
     Damaged,
     Menumusic,
-    PlayingMusic
+    PlayingMusic,
+    Tree,
+    yunque,
+    Fuel,
+    UpgradeYunque,
+    Construccion,
+    Intro,
+    Loop
 
 }
 

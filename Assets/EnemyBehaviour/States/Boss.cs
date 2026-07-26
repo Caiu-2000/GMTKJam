@@ -19,7 +19,9 @@ public class Boss : Enemy
         Machine.Initialice(this, _movement, _ai);
         _combat.InitialiceThis(Machine, this);
         SoundEmmiter.InitializeThis(this);
-        SoundManager.instance.Play(SoundTypes.PlayingMusic);
+        SoundManager.instance.Play(SoundTypes.Intro);
+        StartCoroutine(wait());
+
     }
     public override void applyDamage(float damage, Hitt attack)
     {
@@ -50,5 +52,10 @@ public class Boss : Enemy
             yield return new WaitForSeconds(10.0f);
             if (!FirstQuarter) break;
         }
+    }
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(10.0f);
+        SoundManager.instance.Play(SoundTypes.Loop, true);
     }
 }
