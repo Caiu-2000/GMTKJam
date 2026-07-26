@@ -24,9 +24,9 @@ public class Enemy : Entity
 
     }
 
-    public override void Die()
+    public override void Die(bool noReward = false)
     {
-        GiveLoot();
+        if(noReward == false)GiveLoot();
         Machine.CharacterDied();
     }
 
