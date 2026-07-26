@@ -8,7 +8,7 @@ public class BulletHellBehaviour : MonoBehaviour
 
     private proyectyile[] proyectiles;
 
-    void Start()
+    public void Beguin()
     {
         proyectiles = new proyectyile[NumberOfBullets * 3];
         for (int i = 0; i < NumberOfBullets * 3; i++)

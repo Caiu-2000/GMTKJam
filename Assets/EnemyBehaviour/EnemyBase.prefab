@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 8848059471234360894}
   - component: {fileID: 8502111832461954265}
   - component: {fileID: 1075642170690668202}
+  - component: {fileID: 2072875704793636613}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -138,8 +139,8 @@ Transform:
   m_GameObject: {fileID: 2116413410087781542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.46, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1.49, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 665524840942588311}
@@ -188,7 +189,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e99f5f1308ec71c4086a7b3dbaa627d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 31a805c307e45ea488bce8837006105a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -229,8 +230,34 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f5136978db3371944a715113b0c3baf6, type: 3}
   - {fileID: 21300000, guid: b003f1f47bab23748bec9ac600945f59, type: 3}
   - {fileID: 21300000, guid: 31a805c307e45ea488bce8837006105a, type: 3}
-  AttackSprites: []
+  AttackSprites:
+  - {fileID: 21300000, guid: be7ed936b6ffeb84d90b36561132645b, type: 3}
+  - {fileID: 21300000, guid: 5741c19a1c2c84c4faa6eac7368a0d8e, type: 3}
+  - {fileID: 21300000, guid: 4f019114f65ff7e4ba7d01c65bc38b48, type: 3}
+  - {fileID: 21300000, guid: 83c534009fa192a4493e5e31f1ec61b8, type: 3}
   parent: {fileID: 262276131856806081}
+--- !u!95 &2072875704793636613
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116413410087781542}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4412643127566618072
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +419,6 @@ MonoBehaviour:
   _StaminaCD: 1
   _StaminaCount: 0
   _StaminaRegen: 25
-  LastDirection: {x: 0, y: 0}
   _movement:
     _RB: {fileID: 6129933442193464992}
     _parentEntity: {fileID: 262276131856806081}
@@ -400,7 +426,7 @@ MonoBehaviour:
     LastDirection: {x: 0, y: 0}
   _combat: {fileID: 6608886043800936607}
   _animator: {fileID: 5633915369398564797}
-  _SpriteAnimator: {fileID: 0}
+  _SpriteAnimator: {fileID: 2072875704793636613}
   SoundEmmiter:
     _audioSource: {fileID: 2827504273406414108}
     sounds:
@@ -904,6 +930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GeneralLifeBar
       objectReference: {fileID: 0}
+    - target: {fileID: 3891375881487170299, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5738692751453505466, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -966,7 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5738692751453505466, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 5738692751453505466, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
       propertyPath: m_AnchoredPosition.y

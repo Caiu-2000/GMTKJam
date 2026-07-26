@@ -13,6 +13,7 @@ public class GoingToFireplace : State
 
     private IEnumerator TravelToFireplace()
     {
+        ParentMachine._movement.Move(new Vector2(0, 0));
         _controlledEntity._animator.SetTrigger("Elevate");
         ParentMachine._movement.Move(Vector2.zero);
         yield return new WaitForSeconds(2.0f);
@@ -21,7 +22,8 @@ public class GoingToFireplace : State
 
 
         _controlledEntity._animator.SetTrigger("Descend");
-
+        yield return new WaitForSeconds(2.0f);
+        ParentMachine.ChangeState(DefaultNextState);
 
     }
 }

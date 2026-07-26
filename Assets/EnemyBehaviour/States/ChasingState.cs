@@ -21,9 +21,9 @@ public class ChasingState : State
         {
             if (ChargeState.objective == null) { 
                 ChargeState.objective = GeneralHandler.player.transform;
-                print("Cargue objetivo");
+            
             }
-            print("Tengo charge");
+
             
         }
     
