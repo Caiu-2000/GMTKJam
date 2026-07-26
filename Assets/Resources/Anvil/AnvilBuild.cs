@@ -10,7 +10,7 @@ public class AnvilBuild : MonoBehaviour
     void Update()
     {
         Player player = GeneralHandler.Instance.GetPlayer();
-        if(Keyboard.current.tKey.wasPressedThisFrame && player.inventory.GetGold() >= 5)
+        if(Keyboard.current.eKey.wasPressedThisFrame && player.inventory.GetGold() >= 5)
         {
             player.inventory.RemoveGold(5);
             objectToSpawn.SetActive(true);

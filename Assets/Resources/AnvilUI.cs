@@ -8,6 +8,8 @@ public class AnvilUI : MonoBehaviour
     int maxWeapon = 3;
     bool resourcesCheck = false;
     [SerializeField]Tool[] weapon;
+    [SerializeField] Anvil anvilScript;
+    [SerializeField] campfireFlicker campfire;
     void Start()
     {
         
@@ -18,23 +20,29 @@ public class AnvilUI : MonoBehaviour
     {
         if(player == null)player = GeneralHandler.Instance.GetPlayer();
         resourcesCheck = CheckResources(nextWeapon);
-        if (Keyboard.current.tKey.wasPressedThisFrame && nextWeapon <maxWeapon && resourcesCheck)
+        if (Keyboard.current.yKey.wasPressedThisFrame && nextWeapon <maxWeapon && resourcesCheck)
         { 
             player.ChangeWeapon(weapon[nextWeapon]);
             nextWeapon++;
             gameObject.SetActive(false);
             if (nextWeapon == 1)
+            {
                 player.inventory.RemoveGold(10);
+                anvilScript.currentLevel++;
+            }
             else if (nextWeapon == 2)
             {
                 player.inventory.RemoveGold(15);
                 player.inventory.RemoveLootEspectro(5);
+                anvilScript.currentLevel++;
             }
             else if (nextWeapon == 3)
             {
                 player.inventory.RemoveGold(25);
                 player.inventory.RemoveLootEspectro(10);
+                anvilScript.currentLevel++;
             }
+            print(campfire.currentTier);
             resourcesCheck = false;
         }
     }
@@ -47,12 +55,12 @@ public class AnvilUI : MonoBehaviour
         }
         else if (level == 1)
         {
-            if (player.inventory.GetGold() >= 15 && player.inventory.GetLootEspectro() >= 5) return true;
+            if (player.inventory.GetGold() >= 15 && player.inventory.GetLootEspectro() >= 5 && campfire.currentTier >= 1) return true;
             else return false;
         }
         else if (level == 2)
         {
-            if (player.inventory.GetGold() >= 25 && player.inventory.GetLootEspectro() >= 10) return true;
+            if (player.inventory.GetGold() >= 25 && player.inventory.GetLootEspectro() >= 10 && campfire.currentTier >= 2) return true;
             else return false;
         }
         return false;

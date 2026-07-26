@@ -409,8 +409,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 270ce6d61318e8440aa8333f3f4d5973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentLife: 0
-  _maxLife: 20
+  _currentLife: 3.3
+  _maxLife: 3.3
   _damCD: 0
   _CanInputMovement: 1
   _maxStamina: 100

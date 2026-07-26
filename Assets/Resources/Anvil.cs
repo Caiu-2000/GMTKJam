@@ -5,7 +5,7 @@ public class Anvil : MonoBehaviour, IInteractable
 {
     [SerializeField] GameObject panel;
     [SerializeField] CraftOptionUI[] upgradeLevels;
-    int currentLevel = 0;
+    public int currentLevel = 0;
     public string InteractMessage => "Improve your axe";
 
     public void Interact()
