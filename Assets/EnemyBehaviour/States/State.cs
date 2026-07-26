@@ -5,7 +5,6 @@ using UnityEngine;
 public  class State : MonoBehaviour
 {
 
-    [SerializeField] public string StateName;
     [SerializeField] protected string AnimationTrigger;
     [SerializeField] protected State DefaultNextState;
     [SerializeField] public bool IsPausable = true;

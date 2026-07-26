@@ -18,7 +18,7 @@ public class GeneralLifeBar : MonoBehaviour
     {
 
         StopCoroutine(ChangeUILife(current, max));
-        print("Se llamo a actualizar vida" + max + current);
+      
         StartCoroutine(ChangeUILife(current, max));
 
 

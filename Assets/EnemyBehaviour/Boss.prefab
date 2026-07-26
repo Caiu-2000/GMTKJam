@@ -187,7 +187,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e99f5f1308ec71c4086a7b3dbaa627d2, type: 3}
+  m_Sprite: {fileID: 1979305320, guid: 7df75057689dbd0469389a4cc10327d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 694b2c31c62449149b502c7e9d574581, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _entity: {fileID: 262276131856806081}
+  _entity: {fileID: 0}
 --- !u!1 &4412643127566618072
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,18 +223,15 @@ GameObject:
   - component: {fileID: 5633915369398564797}
   - component: {fileID: 6129933442193464992}
   - component: {fileID: 6136141858668237060}
+  - component: {fileID: 4244620550543871293}
   - component: {fileID: 6608886043800936607}
-  - component: {fileID: 262276131856806081}
   - component: {fileID: 8710736664375351555}
-  - component: {fileID: 6447024411372349469}
-  - component: {fileID: 3788661462701611094}
-  - component: {fileID: 7538107384526274484}
-  - component: {fileID: 5860142612911821564}
-  - component: {fileID: 8847613788818623343}
-  - component: {fileID: 738025067866760362}
   - component: {fileID: 2827504273406414108}
+  - component: {fileID: 6144065248091072700}
+  - component: {fileID: 7293649077597415158}
+  - component: {fileID: 8734829225744382142}
   m_Layer: 0
-  m_Name: EnemyBase
+  m_Name: Boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +267,7 @@ Animator:
   m_GameObject: {fileID: 4412643127566618072}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3f8ee1a669c58094d94e93b36609a11f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -332,6 +329,42 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4244620550543871293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83020db127e0abb41a816263097d319b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentLife: 0
+  _maxLife: 100
+  _damCD: 0
+  _CanInputMovement: 1
+  _maxStamina: 100
+  _currentStamina: 0
+  _StaminaCD: 1
+  _StaminaCount: 0
+  _StaminaRegen: 25
+  _movement:
+    _RB: {fileID: 6129933442193464992}
+    _parentEntity: {fileID: 4244620550543871293}
+    Speed: 5
+  _combat: {fileID: 0}
+  _animator: {fileID: 0}
+  SoundEmmiter:
+    _audioSource: {fileID: 0}
+    sounds: []
+    AudioAlbum: []
+    AudioMixerGroup: {fileID: 0}
+  Machine: {fileID: 8710736664375351555}
+  Loot: 0
+  GoldLooteable: 1
+  HalfLifeState: {fileID: 8734829225744382142}
 --- !u!114 &6608886043800936607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,49 +384,6 @@ MonoBehaviour:
     name: 
     Tier: 0
   FromPlayer: 0
---- !u!114 &262276131856806081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412643127566618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 270ce6d61318e8440aa8333f3f4d5973, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _currentLife: 0
-  _maxLife: 20
-  _damCD: 0
-  _CanInputMovement: 1
-  _maxStamina: 100
-  _currentStamina: 0
-  _StaminaCD: 1
-  _StaminaCount: 0
-  _StaminaRegen: 25
-  _movement:
-    _RB: {fileID: 6129933442193464992}
-    _parentEntity: {fileID: 262276131856806081}
-    Speed: 5
-  _combat: {fileID: 6608886043800936607}
-  _animator: {fileID: 5633915369398564797}
-  SoundEmmiter:
-    _audioSource: {fileID: 2827504273406414108}
-    sounds:
-    - soundName: 
-      type: 8
-      soundClip: {fileID: 8300000, guid: 1dd8ab3e024909d4bb5a7858e8da53d5, type: 3}
-      AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
-      volume: 0.5
-      pitch: 1
-      IsLoop: 0
-      Source: {fileID: 0}
-    AudioAlbum: []
-    AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
-  Machine: {fileID: 8710736664375351555}
-  Loot: 0
-  GoldLooteable: 1
 --- !u!114 &8710736664375351555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -407,135 +397,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statesList:
-  - {fileID: 5860142612911821564}
-  - {fileID: 6447024411372349469}
-  - {fileID: 8847613788818623343}
-  - {fileID: 738025067866760362}
-  - {fileID: 7538107384526274484}
-  - {fileID: 3788661462701611094}
+  - {fileID: 8734829225744382142}
+  - {fileID: 6144065248091072700}
+  - {fileID: 7293649077597415158}
   CurrentState: {fileID: 0}
-  DefaultState: {fileID: 6447024411372349469}
-  DeathState: {fileID: 8847613788818623343}
-  _damaged: {fileID: 3788661462701611094}
+  DefaultState: {fileID: 6144065248091072700}
+  DeathState: {fileID: 0}
+  _damaged: {fileID: 7293649077597415158}
   _movement:
     _RB: {fileID: 0}
     _parentEntity: {fileID: 0}
     Speed: 0
   DebugText: {fileID: 1690255091965770318}
---- !u!114 &6447024411372349469
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412643127566618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82cd49f51dcfc4c45834a07cb54d852f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateName: Chasing
-  AnimationTrigger: 
-  DefaultNextState: {fileID: 0}
-  IsPausable: 1
-  RangeForAttack: 3
-  ChargeState: {fileID: 738025067866760362}
-  Attack: {fileID: 7538107384526274484}
-  ChaseFire: 0
---- !u!114 &3788661462701611094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412643127566618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f09668684c23164aa7cb8527e38d529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateName: 
-  AnimationTrigger: 
-  DefaultNextState: {fileID: 0}
-  IsPausable: 1
-  Paused: {fileID: 0}
-  debug1: {x: 0, y: 0, z: 0}
-  debug2: {x: 0, y: 0, z: 0}
-  debug3: {x: 0, y: 0, z: 0}
---- !u!114 &7538107384526274484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412643127566618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1931c00f1e5097149be814845e067ec1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateName: AttackMele
-  AnimationTrigger: 
-  DefaultNextState: {fileID: 6447024411372349469}
-  IsPausable: 1
-  chargeDuration: 0.2
-  ChargeCD: 0.8
-  ChargeInCD: 0
---- !u!114 &5860142612911821564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412643127566618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a20d4e345494fa940955963552e01f76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateName: Patroll
-  AnimationTrigger: 
-  DefaultNextState: {fileID: 6447024411372349469}
-  IsPausable: 1
-  DetectionRange: 10
---- !u!114 &8847613788818623343
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412643127566618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65352cf81140634fa822c46e2cb5938, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateName: Death
-  AnimationTrigger: 
-  DefaultNextState: {fileID: 0}
-  IsPausable: 0
---- !u!114 &738025067866760362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4412643127566618072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4d8e6a0e765b5043895d14e61575152, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StateName: Charge
-  AnimationTrigger: 
-  DefaultNextState: {fileID: 6447024411372349469}
-  IsPausable: 0
-  SpeedMultiplier: 5
-  chargeDuration: 2
-  CastDuration: 0.5
-  ChargeCD: 10
-  ChargeInCD: 0
-  objective: {fileID: 0}
 --- !u!82 &2827504273406414108
 AudioSource:
   m_ObjectHideFlags: 0
@@ -633,6 +506,62 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6144065248091072700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82cd49f51dcfc4c45834a07cb54d852f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateName: 
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 0}
+  IsPausable: 1
+  RangeForAttack: 1
+  ChargeState: {fileID: 0}
+  Attack: {fileID: 0}
+  ChaseFire: 0
+--- !u!114 &7293649077597415158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f09668684c23164aa7cb8527e38d529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateName: 
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 0}
+  IsPausable: 1
+  Paused: {fileID: 0}
+  debug1: {x: 0, y: 0, z: 0}
+  debug2: {x: 0, y: 0, z: 0}
+  debug3: {x: 0, y: 0, z: 0}
+--- !u!114 &8734829225744382142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1799d02bf20f47c49ad3b378ef38a12a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateName: 
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 0}
+  IsPausable: 1
 --- !u!1 &8113026964324327088
 GameObject:
   m_ObjectHideFlags: 0
@@ -969,10 +898,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7473699276757672338, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
-      propertyPath: ParentEntity
-      value: 
-      objectReference: {fileID: 262276131856806081}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
