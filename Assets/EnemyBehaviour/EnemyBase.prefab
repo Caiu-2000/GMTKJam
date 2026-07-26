@@ -438,11 +438,19 @@ MonoBehaviour:
       pitch: 1
       IsLoop: 0
       Source: {fileID: 0}
+    - soundName: 
+      type: 7
+      soundClip: {fileID: 8300000, guid: e62215a5f0bfbd04fb2c431188b5b942, type: 3}
+      AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+      volume: 1
+      pitch: 1
+      IsLoop: 0
+      Source: {fileID: 0}
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
   Machine: {fileID: 8710736664375351555}
-  Loot: 0
-  GoldLooteable: 1
+  Loot: 1
+  GoldLooteable: 3
 --- !u!114 &8710736664375351555
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -440,8 +440,8 @@ MonoBehaviour:
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
   Machine: {fileID: 8710736664375351555}
-  Loot: 0
-  GoldLooteable: 1
+  Loot: 2
+  GoldLooteable: 2
 --- !u!114 &8710736664375351555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,6 +960,10 @@ PrefabInstance:
     - target: {fileID: 3193473808958230912, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
       propertyPath: m_Name
       value: GeneralLifeBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3891375881487170299, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5738692751453505466, guid: 5fcb9cc335e962b42bc41dacc3afa3bd, type: 3}
       propertyPath: m_Pivot.x

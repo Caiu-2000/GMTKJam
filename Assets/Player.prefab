@@ -484,6 +484,14 @@ MonoBehaviour:
       pitch: 1
       IsLoop: 0
       Source: {fileID: 0}
+    - soundName: 
+      type: 8
+      soundClip: {fileID: 8300000, guid: 782d79acacee92e40b642189fa138bb1, type: 3}
+      AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+      volume: 0.2
+      pitch: 1
+      IsLoop: 0
+      Source: {fileID: 0}
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
   input: {fileID: 7930604962453865310}
@@ -710,6 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b24756d518121b44fad4dd34f4229a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsReady: 0
   BuffDuration: 3
 --- !u!114 &6595109904080110221
 MonoBehaviour:
@@ -723,6 +732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b63b64e68fcf83b49bf854ca18197d99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsReady: 0
   BuffDuration: 3
   Healtick: 1
 --- !u!1 &4777944877343073205
@@ -785,6 +795,7 @@ GameObject:
   - component: {fileID: 7880551063678992926}
   - component: {fileID: 4955739791618158195}
   - component: {fileID: 3858405863644640362}
+  - component: {fileID: 1766357110715022099}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -918,6 +929,19 @@ MonoBehaviour:
   player: {fileID: 7529786451816998552}
   animator: {fileID: 4955739791618158195}
   combat: {fileID: 0}
+--- !u!114 &1766357110715022099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5191920380371910262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694b2c31c62449149b502c7e9d574581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _entity: {fileID: 7529786451816998552}
 --- !u!1 &5275371605478992764
 GameObject:
   m_ObjectHideFlags: 0

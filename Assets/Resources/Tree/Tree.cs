@@ -8,8 +8,10 @@ public class Tree : MonoBehaviour, IHittable
     bool vulnerable = false;
     public void Hitt(Hitt hitt)
     {
+        
         if (!vulnerable)
         {
+            SoundManager.instance.PlayRandom(SoundTypes.Tree);
             life -= hitt.HittDamage;
             vulnerable = true;
             StartCoroutine(IFrame());

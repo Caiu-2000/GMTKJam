@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7255393816456055978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3994545983732464018}
+  - component: {fileID: 1851403801578702578}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3994545983732464018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255393816456055978}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 17.213242, y: 1.337334, z: 12.35884}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1851403801578702578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7255393816456055978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0d5b1fc1be43349af4ed7625658b91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - soundName: 
+    type: 10
+    soundClip: {fileID: 8300000, guid: 54b66ca05aa8eaa4392b92ceb2f4c272, type: 3}
+    AudioMixer: {fileID: -3578748259471925515, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+    volume: 1
+    pitch: 1
+    IsLoop: 1
+    Source: {fileID: 0}
+  - soundName: 
+    type: 13
+    soundClip: {fileID: 8300000, guid: bcc4f38875b69fe42b6339ea78115b98, type: 3}
+    AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+    volume: 1
+    pitch: 1
+    IsLoop: 0
+    Source: {fileID: 0}
+  - soundName: 
+    type: 14
+    soundClip: {fileID: 8300000, guid: 586a16ba3e39e5a4383735af027fc4f7, type: 3}
+    AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+    volume: 1
+    pitch: 1
+    IsLoop: 0
+    Source: {fileID: 0}
+  - soundName: 
+    type: 15
+    soundClip: {fileID: 8300000, guid: d3fdd20d5af5f0648bb7328cae56deb8, type: 3}
+    AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+    volume: 0.2
+    pitch: 1.1
+    IsLoop: 0
+    Source: {fileID: 0}
+  - soundName: 
+    type: 16
+    soundClip: {fileID: 8300000, guid: 8a57f05c8db112f4a9f49f9670629a02, type: 3}
+    AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+    volume: 1
+    pitch: 1.1
+    IsLoop: 0
+    Source: {fileID: 0}
+  - soundName: 
+    type: 17
+    soundClip: {fileID: 8300000, guid: 1966c163c9f05ed4ea4b7fe485b52e4c, type: 3}
+    AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+    volume: 1
+    pitch: 1.1
+    IsLoop: 0
+    Source: {fileID: 0}
+  albums:
+  - type: 11
+    soundClip:
+    - {fileID: 8300000, guid: 4a2c9c5c189313644a39c8869aa216d8, type: 3}
+    - {fileID: 8300000, guid: 6183154828da4c44f80600f55c481c62, type: 3}
+    AudioMixer: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+    volume: 0.5
+    Source: {fileID: 0}
+  AudioMixer:
+  - {fileID: 24300002, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+  - {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
