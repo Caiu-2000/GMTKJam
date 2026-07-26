@@ -19,7 +19,7 @@ public  class State : MonoBehaviour
 
     public virtual void StartState()
     {
-        if (AnimationTrigger != null) _controlledEntity._SpriteAnimator.SetTrigger(AnimationTrigger);
+        if (AnimationTrigger != null && _controlledEntity._SpriteAnimator != null) _controlledEntity._SpriteAnimator.SetTrigger(AnimationTrigger);
     }
 
     public virtual void StopState() 
