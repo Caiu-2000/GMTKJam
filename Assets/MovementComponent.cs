@@ -12,8 +12,8 @@ public class MovementComponent
     [SerializeField] private Entity _parentEntity;
     [SerializeField]
     public float Speed = 3.0f;
-    
 
+    public Vector2 LastDirection;
     public MovementComponent (Rigidbody rb , Entity parent, float newSpeed = 10)
     {
         _RB = rb;
@@ -23,6 +23,7 @@ public class MovementComponent
 
     public void Move(Vector2 moveDir)
     {
+        LastDirection = moveDir;
         _RB.linearVelocity = new Vector3(moveDir.x , 0 , moveDir.y)  * Speed;
     }
 }
