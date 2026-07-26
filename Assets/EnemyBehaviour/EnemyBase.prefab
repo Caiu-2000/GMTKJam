@@ -411,7 +411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLife: 0
-  _maxLife: 20
+  _maxLife: 5.4
   _damCD: 0
   _CanInputMovement: 1
   _maxStamina: 100
