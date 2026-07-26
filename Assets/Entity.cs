@@ -85,7 +85,7 @@ public abstract class Entity : MonoBehaviour, IHittable
         }
     }
 
-    public virtual void Die()
+    public virtual void Die(bool noReward = false)
     {
         Destroy(gameObject);
     }
