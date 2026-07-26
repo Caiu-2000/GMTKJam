@@ -18,6 +18,7 @@ public abstract class Entity : MonoBehaviour, IHittable
     [SerializeField] public MovementComponent _movement;
     [SerializeField] protected CombatComponnetnt _combat;
     [HideInInspector]public Animator _animator;
+    [SerializeField] public Animator _SpriteAnimator;
     private AiComponnent _aiComponnent;
 
     [SerializeField]

@@ -18,6 +18,7 @@ public class DamagedState : State
 
     public override void StartState()
     {
+        base.StartState();
         StartCoroutine(Knockback());
     }
 

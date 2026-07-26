@@ -55,7 +55,9 @@ public class StateMachine :MonoBehaviour
     }
     public void ForceInterrupt(State obligatoryState)
     {
-        
+        CurrentState.StopState();
+        CurrentState = obligatoryState;
+        CurrentState.StartState();
     }
     public void ChangeState(State state) 
     {
