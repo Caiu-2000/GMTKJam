@@ -1,5 +1,11 @@
 using UnityEngine;
-
+public enum ResourceType
+{
+    Logs,
+    Gold,
+    LootEspectro,
+    LootOjo
+}
 public class Inventory
 {
     int logs = 0;
@@ -60,4 +66,15 @@ public class Inventory
 
     public int GetLootOjo() { return mobDropOjo; }
     #endregion
+    public int GetAmount(ResourceType type)
+    {
+        switch (type)
+        {
+            case ResourceType.Logs: return logs;
+            case ResourceType.Gold: return gold;
+            case ResourceType.LootEspectro: return mobDropEspectro;
+            case ResourceType.LootOjo: return mobDropOjo;
+            default: return 0;
+        }
+    }
 }

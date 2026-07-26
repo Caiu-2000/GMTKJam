@@ -11,7 +11,7 @@ public class campfireFlicker : MonoBehaviour
     [SerializeField] CampfireUpgradeData upgradeData;
     Coroutine dimLightRoutine;
     float seed;
-    int currentTier = 0;
+    public int currentTier = 0;
     [SerializeField]GameObject[] campfireModels;
     float intensityMultiplier = 1f;
     public float MaxFuel = 150;
