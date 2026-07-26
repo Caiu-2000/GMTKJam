@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    [SerializeField] protected StateMachine Machine;
+    [SerializeField] public StateMachine Machine;
     protected AiComponnent _ai;
     [SerializeField] protected enemyLoot Loot;
     [SerializeField] private int GoldLooteable = 1;
+    
     private void Start()
     {
         _ai = new AiComponnent(this);

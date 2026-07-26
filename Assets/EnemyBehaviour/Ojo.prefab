@@ -121,6 +121,8 @@ GameObject:
   - component: {fileID: 456743242451818307}
   - component: {fileID: 8848059471234360894}
   - component: {fileID: 8502111832461954265}
+  - component: {fileID: 7901569983712427126}
+  - component: {fileID: 8792678145882335047}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -138,7 +140,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 665524840942588311}
@@ -187,7 +189,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2122af9ffb0c69f4cacaf287181bd9af, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a794a757c15de64d8f8014198172abc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -211,6 +213,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entity: {fileID: 262276131856806081}
+--- !u!114 &7901569983712427126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116413410087781542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d52c28e5c7e5b944b13f951bc46550f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirSprites:
+  - {fileID: 21300000, guid: 39d16d12f04dccd489c552d61819308d, type: 3}
+  - {fileID: 21300000, guid: 39d3f7389d245d040b7c41111b6a6796, type: 3}
+  - {fileID: 21300000, guid: 1a794a757c15de64d8f8014198172abc, type: 3}
+  - {fileID: 21300000, guid: 206421f4f1ed85147a0251c5db6cead2, type: 3}
+  AttackSprites:
+  - {fileID: 21300000, guid: 39d16d12f04dccd489c552d61819308d, type: 3}
+  - {fileID: 21300000, guid: 39d3f7389d245d040b7c41111b6a6796, type: 3}
+  - {fileID: 21300000, guid: 1a794a757c15de64d8f8014198172abc, type: 3}
+  - {fileID: 21300000, guid: 206421f4f1ed85147a0251c5db6cead2, type: 3}
+  parent: {fileID: 262276131856806081}
+--- !u!95 &8792678145882335047
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116413410087781542}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4412643127566618072
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,8 +422,10 @@ MonoBehaviour:
     _RB: {fileID: 6129933442193464992}
     _parentEntity: {fileID: 262276131856806081}
     Speed: 5
+    LastDirection: {x: 0, y: 0}
   _combat: {fileID: 6608886043800936607}
   _animator: {fileID: 5633915369398564797}
+  _SpriteAnimator: {fileID: 8792678145882335047}
   SoundEmmiter:
     _audioSource: {fileID: 2827504273406414108}
     sounds:
@@ -418,6 +467,7 @@ MonoBehaviour:
     _RB: {fileID: 0}
     _parentEntity: {fileID: 0}
     Speed: 0
+    LastDirection: {x: 0, y: 0}
   DebugText: {fileID: 1690255091965770318}
 --- !u!114 &1812521508084607790
 MonoBehaviour:
@@ -431,7 +481,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d8e6a0e765b5043895d14e61575152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Charge
   AnimationTrigger: 
   DefaultNextState: {fileID: 8847613788818623343}
   IsPausable: 0
@@ -453,14 +502,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f09668684c23164aa7cb8527e38d529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 1
   Paused: {fileID: 0}
-  debug1: {x: 0, y: 0, z: 0}
-  debug2: {x: 0, y: 0, z: 0}
-  debug3: {x: 0, y: 0, z: 0}
 --- !u!114 &955228365825338423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,7 +518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 595514b20ae86fb479232bea35e98fd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 1812521508084607790}
   IsPausable: 1
@@ -493,7 +537,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65352cf81140634fa822c46e2cb5938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Death
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 0

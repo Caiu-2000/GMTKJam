@@ -14,7 +14,7 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     public float _maxStamina = 100.0f, _currentStamina = 0.0f;
     public float _StaminaCD = 1f, _StaminaCount = 0, _StaminaRegen = 25f;
-
+   
     [SerializeField] public MovementComponent _movement;
     [SerializeField] protected CombatComponnetnt _combat;
     [HideInInspector]public Animator _animator;
@@ -56,7 +56,7 @@ public abstract class Entity : MonoBehaviour, IHittable
     {
         if (_damCD)
         {
-            print("Se intento golpear pero estaba en cd");
+           
             return;
         }
         StartCoroutine(DamCd());

@@ -1,0 +1,1092 @@
+fileFormatVersion: 2
+guid: 5bbf57d9ada451f458f139626fab2043
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_0
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 5524
+        width: 480
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1096db622ce153479418fc6ba9b3867
+      internalID: 2080908496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_1
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 5524
+        width: 469
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676c64dfa1a7f1d499f0fbc65cd7a16e
+      internalID: 506659308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_2
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 5524
+        width: 464
+        height: 775
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d757fc6b540faf40a88caa296568d31
+      internalID: 1880161746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_3
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 5524
+        width: 469
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608e10fdedb7b84469df5a7d3d32811f
+      internalID: -224437027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_4
+      rect:
+        serializedVersion: 2
+        x: 4659
+        y: 5524
+        width: 484
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4164024c8072fd648ba72d6d65fc9ba0
+      internalID: 1254359682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_5
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 4443
+        width: 480
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000d5d54b326caf47b19fbd2b0c6ad06
+      internalID: 45659683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_6
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 4448
+        width: 474
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df219e3486f5cf9418065b041cdb99c9
+      internalID: -1175447155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_7
+      rect:
+        serializedVersion: 2
+        x: 2476
+        y: 4438
+        width: 482
+        height: 780
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b11bff407519947824d9f20dab03d2
+      internalID: 1037925094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_8
+      rect:
+        serializedVersion: 2
+        x: 3552
+        y: 4430
+        width: 484
+        height: 793
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c24e91ecad022a4a8b254db142eae9e
+      internalID: 794607627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_9
+      rect:
+        serializedVersion: 2
+        x: 4638
+        y: 4443
+        width: 480
+        height: 775
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607484ec7a534d74ab8a6d511a68392d
+      internalID: 1080069634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_10
+      rect:
+        serializedVersion: 2
+        x: 5724
+        y: 4443
+        width: 478
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf48305fd14b16488b8949284feb4e2
+      internalID: 1678441266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_11
+      rect:
+        serializedVersion: 2
+        x: 6811
+        y: 4443
+        width: 474
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c18c7216a7578429c92055e1653bbe
+      internalID: -2082402059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_12
+      rect:
+        serializedVersion: 2
+        x: 7881
+        y: 4448
+        width: 480
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8ccb82be77f964fbce2a6ffef2de17
+      internalID: 1615958929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_13
+      rect:
+        serializedVersion: 2
+        x: 8978
+        y: 4443
+        width: 485
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2de1e37a14ea694aa271b87524fbe1b
+      internalID: -2081786287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 3367
+        width: 480
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89d786dbcfa5114ab42f932c71aceeb
+      internalID: -1438434463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_15
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 3362
+        width: 496
+        height: 759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db66cbaea739ea54589962a8fbd34833
+      internalID: -1223229787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_16
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 3367
+        width: 506
+        height: 736
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39799102ba6df1a43b1c551a934ee6ca
+      internalID: 851947306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_18
+      rect:
+        serializedVersion: 2
+        x: 3578
+        y: 3368
+        width: 501
+        height: 742
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30a82aea82465c49b1b661a23efa4b9
+      internalID: -1127091558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_19
+      rect:
+        serializedVersion: 2
+        x: 4654
+        y: 3372
+        width: 511
+        height: 744
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51d82fdb601264d40a269594fb778253
+      internalID: 1307185200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_20
+      rect:
+        serializedVersion: 2
+        x: 5735
+        y: 3368
+        width: 500
+        height: 753
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86536148b1100c44490951c215afe283
+      internalID: 2094549782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_21
+      rect:
+        serializedVersion: 2
+        x: 6816
+        y: 3367
+        width: 495
+        height: 759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6324159641e8c4f911e2f5e7b7680b
+      internalID: -1666607166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_23
+      rect:
+        serializedVersion: 2
+        x: 7897
+        y: 3362
+        width: 490
+        height: 764
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af812b2b231f154a82c4e195d1e40fc
+      internalID: -455853478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_24
+      rect:
+        serializedVersion: 2
+        x: 8978
+        y: 3367
+        width: 484
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c448f30a29f4834290770656c20b7ef
+      internalID: 886130533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_28
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2286
+        width: 480
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bca4f4d035af7b479ff00f10828f6d4
+      internalID: 163870216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_29
+      rect:
+        serializedVersion: 2
+        x: 1427
+        y: 2286
+        width: 453
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e72d327805a3941b6e26a443a2d070
+      internalID: 526906045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_30
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 2286
+        width: 443
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc9964722da4d3449cc0863bb5861da
+      internalID: -1277420749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_32
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 2286
+        width: 437
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998ef587208564c4398d68df8ca15edb
+      internalID: -1059410144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_34
+      rect:
+        serializedVersion: 2
+        x: 4464
+        y: 2286
+        width: 646
+        height: 759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16b259f3c75f5bc44919041c3799b0d4
+      internalID: -1801711674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_35
+      rect:
+        serializedVersion: 2
+        x: 5482
+        y: 2286
+        width: 706
+        height: 749
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4b1edaa885176b47a70a41d56396ba8
+      internalID: -929466969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_36
+      rect:
+        serializedVersion: 2
+        x: 6621
+        y: 2286
+        width: 648
+        height: 759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4df5b144b9410418a2c5b125eef056
+      internalID: 552864464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_37
+      rect:
+        serializedVersion: 2
+        x: 7844
+        y: 2286
+        width: 506
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef604a2dbfbb44e4aab24779acaf6e78
+      internalID: 798121341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_38
+      rect:
+        serializedVersion: 2
+        x: 8319
+        y: 2697
+        width: 37
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a329366bdb8a41f4fa4ad1e0be8a771f
+      internalID: 1364166103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_39
+      rect:
+        serializedVersion: 2
+        x: 9010
+        y: 2286
+        width: 427
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50987d248fa51ba429922972506ef90e
+      internalID: 2099987470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_40
+      rect:
+        serializedVersion: 2
+        x: 10060
+        y: 2286
+        width: 479
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8289ddea8b12754aaf1cee0f6608d69
+      internalID: 1324107516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_41
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 1205
+        width: 482
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83f702f8fa28bc4c9dcd62f7fb58091
+      internalID: 1251912095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_42
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 1200
+        width: 463
+        height: 759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc11c2277faab4f43ad5306f3fdcfcdf
+      internalID: 319161676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_43
+      rect:
+        serializedVersion: 2
+        x: 2497
+        y: 1200
+        width: 432
+        height: 743
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04030c21f7b2ff345902747b153e265d
+      internalID: -43230017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_44
+      rect:
+        serializedVersion: 2
+        x: 3568
+        y: 1200
+        width: 463
+        height: 759
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e0cb8501b00e84bbf9640c2859db35
+      internalID: 1035257994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_45
+      rect:
+        serializedVersion: 2
+        x: 4649
+        y: 1205
+        width: 490
+        height: 765
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48492094cf7aa8048b598c5c96486396
+      internalID: 1049706425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_46
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 124
+        width: 490
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53178fda555eb6949917b003ce387962
+      internalID: -1428196027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_47
+      rect:
+        serializedVersion: 2
+        x: 1419
+        y: 98
+        width: 528
+        height: 722
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eb7ad12b8191fc479f7735b3d9db57b
+      internalID: 908535862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prota Character Sheet-01_48
+      rect:
+        serializedVersion: 2
+        x: 2508
+        y: 119
+        width: 540
+        height: 627
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cabc78876eb75b4da94188943b24c8d
+      internalID: 237708413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b25ea0d5461879844a187f067e85e0fc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Prota Character Sheet-01_0: 2080908496
+      Prota Character Sheet-01_1: 506659308
+      Prota Character Sheet-01_10: 1678441266
+      Prota Character Sheet-01_11: -2082402059
+      Prota Character Sheet-01_12: 1615958929
+      Prota Character Sheet-01_13: -2081786287
+      Prota Character Sheet-01_14: -1438434463
+      Prota Character Sheet-01_15: -1223229787
+      Prota Character Sheet-01_16: 851947306
+      Prota Character Sheet-01_17: -1786266918
+      Prota Character Sheet-01_18: -1127091558
+      Prota Character Sheet-01_19: 1307185200
+      Prota Character Sheet-01_2: 1880161746
+      Prota Character Sheet-01_20: 2094549782
+      Prota Character Sheet-01_21: -1666607166
+      Prota Character Sheet-01_22: -1525454730
+      Prota Character Sheet-01_23: -455853478
+      Prota Character Sheet-01_24: 886130533
+      Prota Character Sheet-01_25: -1887657272
+      Prota Character Sheet-01_26: 1701483008
+      Prota Character Sheet-01_27: -1141249136
+      Prota Character Sheet-01_28: 163870216
+      Prota Character Sheet-01_29: 526906045
+      Prota Character Sheet-01_3: -224437027
+      Prota Character Sheet-01_30: -1277420749
+      Prota Character Sheet-01_31: -630388213
+      Prota Character Sheet-01_32: -1059410144
+      Prota Character Sheet-01_33: 721827393
+      Prota Character Sheet-01_34: -1801711674
+      Prota Character Sheet-01_35: -929466969
+      Prota Character Sheet-01_36: 552864464
+      Prota Character Sheet-01_37: 798121341
+      Prota Character Sheet-01_38: 1364166103
+      Prota Character Sheet-01_39: 2099987470
+      Prota Character Sheet-01_4: 1254359682
+      Prota Character Sheet-01_40: 1324107516
+      Prota Character Sheet-01_41: 1251912095
+      Prota Character Sheet-01_42: 319161676
+      Prota Character Sheet-01_43: -43230017
+      Prota Character Sheet-01_44: 1035257994
+      Prota Character Sheet-01_45: 1049706425
+      Prota Character Sheet-01_46: -1428196027
+      Prota Character Sheet-01_47: 908535862
+      Prota Character Sheet-01_48: 237708413
+      Prota Character Sheet-01_49: 782588726
+      Prota Character Sheet-01_5: 45659683
+      Prota Character Sheet-01_50: -1900739168
+      Prota Character Sheet-01_6: -1175447155
+      Prota Character Sheet-01_7: 1037925094
+      Prota Character Sheet-01_8: 794607627
+      Prota Character Sheet-01_9: 1080069634
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

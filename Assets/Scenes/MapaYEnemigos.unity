@@ -769,6 +769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 0}
+  upgradeLevels: []
 --- !u!23 &661827922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1901,6 +1902,7 @@ MonoBehaviour:
   intensityVariance: 10
   noiseSpeed: 10
   upgradeData: {fileID: 0}
+  currentTier: 0
   campfireModels: []
   MaxFuel: 150
 --- !u!4 &1420859515
@@ -2179,6 +2181,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4244620550543871293, guid: 52a49d39618737648a7f2cde30eedbdc, type: 3}
+      propertyPath: SpawnRadius
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244620550543871293, guid: 52a49d39618737648a7f2cde30eedbdc, type: 3}
+      propertyPath: Enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244620550543871293, guid: 52a49d39618737648a7f2cde30eedbdc, type: 3}
+      propertyPath: 'Enemies.Array.data[0]'
+      value: 
+      objectReference: {fileID: 262276131856806081, guid: b15ca980dd70cb0448942f36a650cdb7, type: 3}
+    - target: {fileID: 4244620550543871293, guid: 52a49d39618737648a7f2cde30eedbdc, type: 3}
+      propertyPath: 'Enemies.Array.data[1]'
+      value: 
+      objectReference: {fileID: 262276131856806081, guid: 8a151b9f23b5e524ab3bea6f9147acbb, type: 3}
     - target: {fileID: 4412643127566618072, guid: 52a49d39618737648a7f2cde30eedbdc, type: 3}
       propertyPath: m_Name
       value: Boss
