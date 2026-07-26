@@ -443,9 +443,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eda37b9b0dd149e4aadb799475a2cff0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1074251727}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: eda37b9b0dd149e4aadb799475a2cff0, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1074251726}
   m_SourcePrefab: {fileID: 100100000, guid: eda37b9b0dd149e4aadb799475a2cff0, type: 3}
 --- !u!1 &400586241
 GameObject:
@@ -620,6 +617,7 @@ MonoBehaviour:
     availableUI: {fileID: 0}
     lockedUI: {fileID: 0}
     requiredCampfireTier: 3
+  currentLevel: 0
 --- !u!23 &661827922
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -860,6 +858,7 @@ MonoBehaviour:
     availableUI: {fileID: 0}
     lockedUI: {fileID: 0}
     requiredCampfireTier: 3
+  currentLevel: 0
 --- !u!1 &830010407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,19 +1321,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: eda37b9b0dd149e4aadb799475a2cff0, type: 3}
   m_PrefabInstance: {fileID: 314136108}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1074251726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074251725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 902ce61fa60f43c408628c9f19c86e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 0}
 --- !u!65 &1074251727
 BoxCollider:
   m_ObjectHideFlags: 0

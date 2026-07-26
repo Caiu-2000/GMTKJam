@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 3362511717989238220}
   - component: {fileID: 9097794508911000385}
   - component: {fileID: 1097115059918811400}
+  - component: {fileID: 2749649817195851323}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -645,9 +646,10 @@ MonoBehaviour:
   - {fileID: 3362511717989238220}
   - {fileID: 9097794508911000385}
   - {fileID: 1097115059918811400}
+  - {fileID: 2749649817195851323}
   CurrentState: {fileID: 0}
   DefaultState: {fileID: 6144065248091072700}
-  DeathState: {fileID: 0}
+  DeathState: {fileID: 2749649817195851323}
   _damaged: {fileID: 7293649077597415158}
   _movement:
     _RB: {fileID: 6129933442193464992}
@@ -857,6 +859,21 @@ MonoBehaviour:
   DefaultNextState: {fileID: 0}
   IsPausable: 0
   DetectionRange: 0
+--- !u!114 &2749649817195851323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36aeed2a4e02bd64eb1176c56df84112, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnimationTrigger: 
+  DefaultNextState: {fileID: 0}
+  IsPausable: 1
 --- !u!1 &4626455145379339382
 GameObject:
   m_ObjectHideFlags: 0
