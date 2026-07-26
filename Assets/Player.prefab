@@ -232,7 +232,7 @@ Transform:
   m_GameObject: {fileID: 2410944949397348847}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 20.2, z: -9.8}
+  m_LocalPosition: {x: 0.3, y: 20.2, z: -16.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -257,6 +257,9 @@ GameObject:
   - component: {fileID: 3415684807539456831}
   - component: {fileID: 2842603705239800049}
   - component: {fileID: 6503091623535352382}
+  - component: {fileID: 6693765662122652647}
+  - component: {fileID: 2662578583392292027}
+  - component: {fileID: 6595109904080110221}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -355,8 +358,8 @@ MonoBehaviour:
   _StaminaRegen: 25
   _movement:
     _RB: {fileID: 6267968158093358747}
-    _parentEntity: {fileID: 0}
-    Speed: 3
+    _parentEntity: {fileID: 7529786451816998552}
+    Speed: 25
   _combat: {fileID: 7532965957473369615}
   _animator: {fileID: 0}
   SoundEmmiter:
@@ -373,6 +376,7 @@ MonoBehaviour:
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
   input: {fileID: 7930604962453865310}
+  PlayerSpeed: 50
 --- !u!114 &7930604962453865310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentWeapon:
-    damage: 0
+    damage: 5
     weaponSprite: {fileID: 0}
     HittboxSize: {x: 1.5, y: 1.5, z: 1.5}
     name: Hacha
@@ -563,6 +567,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeText: {fileID: 0}
+--- !u!114 &6693765662122652647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4684660398503384694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89d31468b4c60841807a5c93335a08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanDash: 0
+  DashStrength: 4
+  DashDuration: 0.1
+  DashLinked: 0
+--- !u!114 &2662578583392292027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4684660398503384694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b24756d518121b44fad4dd34f4229a58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuffDuration: 3
+--- !u!114 &6595109904080110221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4684660398503384694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63b64e68fcf83b49bf854ca18197d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4777944877343073205
 GameObject:
   m_ObjectHideFlags: 0

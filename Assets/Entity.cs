@@ -15,9 +15,10 @@ public abstract class Entity : MonoBehaviour, IHittable
     public float _maxStamina = 100.0f, _currentStamina = 0.0f;
     public float _StaminaCD = 1f, _StaminaCount = 0, _StaminaRegen = 25f;
 
-    [SerializeField] protected MovementComponent _movement;
+    [SerializeField] public MovementComponent _movement;
     [SerializeField] protected CombatComponnetnt _combat;
     [HideInInspector]public Animator _animator;
+    [SerializeField] public Animator _SpriteAnimator;
     private AiComponnent _aiComponnent;
 
     [SerializeField]
@@ -53,8 +54,11 @@ public abstract class Entity : MonoBehaviour, IHittable
 
     public virtual void applyDamage(float damage , Hitt attack)
     {
-        if (_damCD) return;
-
+        if (_damCD)
+        {
+            print("Se intento golpear pero estaba en cd");
+            return;
+        }
         StartCoroutine(DamCd());
         if (_currentLife == 0) _currentLife = _maxLife;
         _currentLife -= damage;
@@ -97,18 +101,19 @@ public abstract class Entity : MonoBehaviour, IHittable
     {
         _currentLife += _healAmount;
         if (_currentLife > _maxLife) _currentLife = _maxLife;
+        OnHealthChanged?.Invoke(_currentLife , _maxLife);
     }
 
 
     public void Hitt(Hitt hitt)
     {
-        print(hitt.AttackFrom);
+      
         applyDamage(hitt.HittDamage , hitt );
     }
 
 
 
-    private IEnumerator DamCd()
+    protected IEnumerator DamCd()
     {
         _damCD = true;
         yield return new WaitForSeconds(0.1f);

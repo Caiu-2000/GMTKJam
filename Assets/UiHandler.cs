@@ -25,7 +25,7 @@ public class UiHandler : MonoBehaviour
 
     private void CheckForPlayer()
     {
-        print("Estoy buscando al player");
+   
         GeneralHandler.UiHandler= this;
 
         _player = GeneralHandler.player;
@@ -49,7 +49,7 @@ public class UiHandler : MonoBehaviour
     {
 
         StopCoroutine(ChangeUILife(current , max));
-        print("Se llamo a actualizar vida" + max + current);
+ 
         StartCoroutine(ChangeUILife(current, max));
 
 
@@ -57,7 +57,7 @@ public class UiHandler : MonoBehaviour
     }
     public void UpdateFireProgress(float current , float max)
     {
-        print(current);
+        //print(current);
         _fireBar.fillAmount = (current / max);
     }
 

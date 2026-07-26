@@ -20,7 +20,7 @@ public class EntitySoundComponent : SoundEmitterComponent
 
     public void PlayDamaged(Hitt data)
     {
-        Debug.Log("Se daño al enemmigo");
+     
         PlaySound(SoundTypes.Damaged , true);
     }
     public void PlayDeath()

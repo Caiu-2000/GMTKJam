@@ -6,7 +6,7 @@ public class ChasingState : State
 
     [SerializeField] protected ChargeAttack ChargeState;
    
-    [SerializeField] private AttackMeleState Attack;
+    [SerializeField] protected AttackMeleState Attack;
     [SerializeField] private bool ChaseFire;
 
     public override void StartState()
@@ -17,7 +17,7 @@ public class ChasingState : State
     }
     public override void UpdateState()
     {
-        if (ChargeState.objective == null) { ChargeState.objective = GeneralHandler.player.transform; }
+        if(ChargeState != null) if (ChargeState.objective == null) { ChargeState.objective = GeneralHandler.player.transform; }
         ParentMachine._movement.Move(ParentMachine._ai.DirectionTowards(GeneralHandler.player.transform.position));
 
         if (Vector3.Distance(this.transform.position, GeneralHandler.player.transform.position) < RangeForAttack)

@@ -45,7 +45,7 @@ public class StateMachine :MonoBehaviour
         if (DefaultState != null)
         {
             CurrentState = DefaultState;
-            DebugText.text = CurrentState.StateName;
+         
             CurrentState.StartState();
         }
     }
@@ -55,7 +55,9 @@ public class StateMachine :MonoBehaviour
     }
     public void ForceInterrupt(State obligatoryState)
     {
-        
+        CurrentState.StopState();
+        CurrentState = obligatoryState;
+        CurrentState.StartState();
     }
     public void ChangeState(State state) 
     {
@@ -63,7 +65,7 @@ public class StateMachine :MonoBehaviour
         CurrentState.StopState();
         CurrentState = state;
         CurrentState.StartState();
-        DebugText.text = state.StateName;
+       
 
     }
 

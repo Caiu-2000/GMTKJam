@@ -12,8 +12,8 @@ using UnityEngine.SceneManagement;
 public class PlayerInput : MonoBehaviour
 {
     
-    private InputAction _useAction, _useItemAction, _movementAction, _lookAction, _attackAction, _interactAction, _blockAction, _rightClickAction;
-    private InputAction _parryAction;
+    private InputAction _useAction, _dashAction, _movementAction, _lookAction, _attackAction, _interactAction, _blockAction, _rightClickAction , _buffAction;
+    private InputAction _parryAction , _healAction;
     
     Vector2 _dir = Vector2.zero;
     private bool CanInputActions = true;
@@ -25,6 +25,8 @@ public class PlayerInput : MonoBehaviour
     public delegate void JumpPress();
     public delegate void UseAction();
     public delegate void Parry();
+    public delegate void Dash();
+
 
     public AttacksDelegate OnAttackPressed = delegate { };
     public AttacksDelegate OnAttackReleased = delegate { };
@@ -33,9 +35,11 @@ public class PlayerInput : MonoBehaviour
     public UseAction OnUsePressed = delegate { };
     public UseAction OnUseItemPressed = delegate { };
 
+    public Dash OnDashPressed = delegate {  } ;
 
     public Parry OnParryPressed = delegate { };
-
+    public Dash OnBuffPressed = delegate { };
+    public Dash OnHealPressed = delegate { };
     [SerializeField] private MovementComponent _movement;
 
     // Este todavia no se usa pero ya queda aca
@@ -52,8 +56,9 @@ public class PlayerInput : MonoBehaviour
         _useAction = InputSystem.actions.FindAction("Use");
      
         _rightClickAction = InputSystem.actions.FindAction("SecondClick");
-
-       
+        _dashAction = InputSystem.actions.FindAction("DASH");
+        _buffAction = InputSystem.actions.FindAction("Cntrl");
+        _healAction = InputSystem.actions.FindAction("Heal");
 
 
 
@@ -71,12 +76,13 @@ public class PlayerInput : MonoBehaviour
         Debug.DrawLine(Camera.main.transform.position, currentWorldPosition, Color.green);
     
 
-        _dir = _movementAction.ReadValue<Vector2>();
+        
 
 
 
         if (CanInputActions)
         {
+            _dir = _movementAction.ReadValue<Vector2>();
             if (_attackAction.WasPressedThisFrame())
             {
 
@@ -95,28 +101,12 @@ public class PlayerInput : MonoBehaviour
             {
 
             }
-
+            if( _dashAction.WasPressedThisFrame()) { OnDashPressed?.Invoke(); }
+            if (_buffAction.WasPressedThisFrame()) { OnBuffPressed?.Invoke(); }
+            if (_healAction.WasPressedThisFrame()) { OnHealPressed?.Invoke();  }
         }
 
 
-        /*
-         * si metemos inventario usamos esto para la hotbar
-        if (Keyboard.current.anyKey.wasPressedThisFrame)
-        {
-
-            for (int i = 1; i <= 4; i++)
-            {
-
-                Key tecla = (Key)System.Enum.Parse(typeof(Key), "Digit" + i);
-
-                if (Keyboard.current[tecla].wasPressedThisFrame)
-                {
-                    _inventory.ChangeSelection(i - 1);
-                    break;
-                }
-            }
-        }
-        */
 
 
     }
@@ -125,6 +115,10 @@ public class PlayerInput : MonoBehaviour
     {
 
        _movement.Move(_dir);
+    }
+    public Vector2 GetMoveDir()
+    {
+        return _dir;
     }
 
     public void DeactivateActions()

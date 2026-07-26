@@ -46,14 +46,5 @@ public class PatrollState : State
         ObjPosition = FirstPos + new Vector3(Random.Range(-Range, Range),0,Random.Range(-Range, Range));
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(ObjPosition, 0.5f);
 
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, DetectionRange);
-
-
-    }
 }

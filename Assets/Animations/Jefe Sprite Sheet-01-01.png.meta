@@ -1,0 +1,1268 @@
+fileFormatVersion: 2
+guid: 0b3311f488a2cd2428d5793c903c65d2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_0
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 9871
+        width: 607
+        height: 767
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5933a76beed06a45aa9c201f9b826d4
+      internalID: 2061501599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_1
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 9871
+        width: 608
+        height: 767
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4dd1e879eb13d4d8e69066000ae1c0
+      internalID: 761936986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_2
+      rect:
+        serializedVersion: 2
+        x: 2360
+        y: 9871
+        width: 605
+        height: 783
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6de4e6c54ba77d4baa3643d5cf489b4
+      internalID: 1510512688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_6
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 8788
+        width: 607
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293526bff7ed82947b8f9b5b136546e7
+      internalID: 58652639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_7
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 8790
+        width: 634
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e03eb5dbcf056a4bb969045fb16da76
+      internalID: -1808714771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_8
+      rect:
+        serializedVersion: 2
+        x: 2246
+        y: 8790
+        width: 708
+        height: 774
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f62ea2a05f9e042b86c97f4683c2e7
+      internalID: 1435188312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_9
+      rect:
+        serializedVersion: 2
+        x: 3547
+        y: 8790
+        width: 719
+        height: 779
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9426ba0c52b00cf469c2423e10c0ae95
+      internalID: 1047673999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_11
+      rect:
+        serializedVersion: 2
+        x: 4626
+        y: 8788
+        width: 603
+        height: 781
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a695989dd08c24fbde09d185acfedc
+      internalID: -558641928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_13
+      rect:
+        serializedVersion: 2
+        x: 5668
+        y: 8788
+        width: 524
+        height: 776
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a23ad5cde96da45841b29d0461d4f2
+      internalID: -1126099574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_14
+      rect:
+        serializedVersion: 2
+        x: 6668
+        y: 8788
+        width: 606
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb4308a34b685a4d87ba5d5e7923f44
+      internalID: -1918310875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_21
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 7709
+        width: 608
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671a2f622745c74438ef7a06b323b91b
+      internalID: -1554826584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_23
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 7709
+        width: 574
+        height: 768
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d975c93363f0a2543a5a1c885b664a9e
+      internalID: -1617830635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_24
+      rect:
+        serializedVersion: 2
+        x: 2349
+        y: 7709
+        width: 605
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee69bf5f94c094a448b3d503303edc22
+      internalID: 882325864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_28
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 6630
+        width: 608
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dab8258e6682224c9fb86baae905c89
+      internalID: -1036729795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_29
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 6630
+        width: 619
+        height: 792
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95bb3f00d0ec624c94fca16982874bf
+      internalID: 869352665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_30
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 6630
+        width: 624
+        height: 806
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8157efc7b0de54d8a35d3a9a02cccb
+      internalID: 2001772839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_31
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 6630
+        width: 635
+        height: 814
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bf27a933e2c0d14d9de4b1e9028f34b
+      internalID: 1475043352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_32
+      rect:
+        serializedVersion: 2
+        x: 4479
+        y: 6630
+        width: 623
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b3cb9f2b0e9ed43a4521a8c942d53d
+      internalID: -680831740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_33
+      rect:
+        serializedVersion: 2
+        x: 5578
+        y: 6630
+        width: 607
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0bea2add07c89f46adb595ce1aef899
+      internalID: -1987894060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_34
+      rect:
+        serializedVersion: 2
+        x: 6668
+        y: 6630
+        width: 608
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0eb0e813418f47498e9a3abdb84bb29
+      internalID: 865633388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_42
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 5551
+        width: 608
+        height: 766
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cbe8680ffebbe48995b3240da6a227
+      internalID: -1175220482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_43
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 5524
+        width: 693
+        height: 772
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7871cb08abe104497e9380c1a7c820
+      internalID: -558158364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_44
+      rect:
+        serializedVersion: 2
+        x: 2262
+        y: 5524
+        width: 819
+        height: 755
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723aaf5544ccf1c428c980857c2f8854
+      internalID: 1500320058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_45
+      rect:
+        serializedVersion: 2
+        x: 3474
+        y: 5524
+        width: 681
+        height: 772
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cba41073ae52054782f8e244ec78068
+      internalID: 1742649145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_47
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 5551
+        width: 566
+        height: 766
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab805d376406aa48851976f1554d56b
+      internalID: 1357203933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_48
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 5524
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab336c77b61922543b144bc4a6f46379
+      internalID: -934917996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_50
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 4424
+        width: 598
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 159b37fb0aba8cc46b2b0dc01dd6e81b
+      internalID: 639735858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_51
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 4450
+        width: 592
+        height: 836
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7ebcb22fd784f4781d40a4f80ceeea
+      internalID: -912869460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_52
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 4424
+        width: 598
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f12d0c5b0f9f1024992e7ca664a4c998
+      internalID: -1329873856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_53
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 3337
+        width: 598
+        height: 833
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96bfacbe3921d0a46be94082ad979505
+      internalID: -1361873406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_54
+      rect:
+        serializedVersion: 2
+        x: 1362
+        y: 3353
+        width: 486
+        height: 837
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ebcb57b83475e74789877f5305afe16
+      internalID: -1846682315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_55
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 3361
+        width: 566
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe769c343adeda14ba9cead4c6c585ff
+      internalID: 1061462595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_56
+      rect:
+        serializedVersion: 2
+        x: 3521
+        y: 3356
+        width: 782
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e75ec5af14f3e459960e043fea2098
+      internalID: -970191594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_57
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 3350
+        width: 740
+        height: 836
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40833508802d1e241a59cb161b469b04
+      internalID: -133436168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_58
+      rect:
+        serializedVersion: 2
+        x: 5680
+        y: 3345
+        width: 602
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf2c9c7fe160634eba7db036037c24c
+      internalID: 973266275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_59
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 2256
+        width: 598
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4818f8fb455128f4b80ec48f8cced8d6
+      internalID: -513557593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_60
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 2235
+        width: 524
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d39d80ab5715ba499276052e2f12e06
+      internalID: -1137068803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_61
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 2256
+        width: 593
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a497774ac1cab4a95b34e3e761b087
+      internalID: -1625499491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_62
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1206
+        width: 618
+        height: 822
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f9ab97c4284314a9eb5b3ef961cb71
+      internalID: 923175719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_63
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 1236
+        width: 640
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46677da0e5eb5b14a8ba81eb2fc582fc
+      internalID: -1518886566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_64
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 1219
+        width: 656
+        height: 812
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfbfad5bb7d9cba4cb5649cdfa7d1099
+      internalID: 439542052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_65
+      rect:
+        serializedVersion: 2
+        x: 3441
+        y: 1225
+        width: 667
+        height: 797
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a8f805896f9204d845fe764b5a50ad
+      internalID: 667458278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_66
+      rect:
+        serializedVersion: 2
+        x: 4547
+        y: 1211
+        width: 640
+        height: 807
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab31bc835448c1948964fe1b1f02d661
+      internalID: -1570412090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_67
+      rect:
+        serializedVersion: 2
+        x: 5653
+        y: 1198
+        width: 618
+        height: 819
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3442421fc85eb4089d472660a17f86
+      internalID: 801200406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_68
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 98
+        width: 598
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8dc6efe75a390d42acd72105adc181b
+      internalID: 1851391697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_69
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 77
+        width: 506
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46122b751f6fa5c43b48ca1b66b62752
+      internalID: -92839924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_70
+      rect:
+        serializedVersion: 2
+        x: 2267
+        y: 82
+        width: 783
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9544aafff10fa3040b5053465f1c06b2
+      internalID: -1951449969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_71
+      rect:
+        serializedVersion: 2
+        x: 3373
+        y: 77
+        width: 698
+        height: 846
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642bd294aaf4134459dcd59b6f6068c2
+      internalID: -353040581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jefe Sprite Sheet-01-01_72
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 98
+        width: 603
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03ee5912047577419a190436628810c
+      internalID: 88068416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 12c86d0fa0e6e274288f801a7c91ed0b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Jefe Sprite Sheet-01-01_0: 2061501599
+      Jefe Sprite Sheet-01-01_1: 761936986
+      Jefe Sprite Sheet-01-01_10: -302650899
+      Jefe Sprite Sheet-01-01_11: -558641928
+      Jefe Sprite Sheet-01-01_12: 711757677
+      Jefe Sprite Sheet-01-01_13: -1126099574
+      Jefe Sprite Sheet-01-01_14: -1918310875
+      Jefe Sprite Sheet-01-01_15: 220684204
+      Jefe Sprite Sheet-01-01_16: 303360556
+      Jefe Sprite Sheet-01-01_17: -1553774507
+      Jefe Sprite Sheet-01-01_18: -1584969671
+      Jefe Sprite Sheet-01-01_19: 1696940672
+      Jefe Sprite Sheet-01-01_2: 1510512688
+      Jefe Sprite Sheet-01-01_20: 355012617
+      Jefe Sprite Sheet-01-01_21: -1554826584
+      Jefe Sprite Sheet-01-01_22: -2046418393
+      Jefe Sprite Sheet-01-01_23: -1617830635
+      Jefe Sprite Sheet-01-01_24: 882325864
+      Jefe Sprite Sheet-01-01_25: -143553121
+      Jefe Sprite Sheet-01-01_26: 405092923
+      Jefe Sprite Sheet-01-01_27: 1128848313
+      Jefe Sprite Sheet-01-01_28: -1036729795
+      Jefe Sprite Sheet-01-01_29: 869352665
+      Jefe Sprite Sheet-01-01_3: -943788229
+      Jefe Sprite Sheet-01-01_30: 2001772839
+      Jefe Sprite Sheet-01-01_31: 1475043352
+      Jefe Sprite Sheet-01-01_32: -680831740
+      Jefe Sprite Sheet-01-01_33: -1987894060
+      Jefe Sprite Sheet-01-01_34: 865633388
+      Jefe Sprite Sheet-01-01_35: 11318514
+      Jefe Sprite Sheet-01-01_36: 1402499847
+      Jefe Sprite Sheet-01-01_37: 1090600251
+      Jefe Sprite Sheet-01-01_38: 729794410
+      Jefe Sprite Sheet-01-01_39: -1050151379
+      Jefe Sprite Sheet-01-01_4: 632901108
+      Jefe Sprite Sheet-01-01_40: -2085321921
+      Jefe Sprite Sheet-01-01_41: -1222199569
+      Jefe Sprite Sheet-01-01_42: -1175220482
+      Jefe Sprite Sheet-01-01_43: -558158364
+      Jefe Sprite Sheet-01-01_44: 1500320058
+      Jefe Sprite Sheet-01-01_45: 1742649145
+      Jefe Sprite Sheet-01-01_46: -453222565
+      Jefe Sprite Sheet-01-01_47: 1357203933
+      Jefe Sprite Sheet-01-01_48: -934917996
+      Jefe Sprite Sheet-01-01_49: 1828009932
+      Jefe Sprite Sheet-01-01_5: 1409040475
+      Jefe Sprite Sheet-01-01_50: 639735858
+      Jefe Sprite Sheet-01-01_51: -912869460
+      Jefe Sprite Sheet-01-01_52: -1329873856
+      Jefe Sprite Sheet-01-01_53: -1361873406
+      Jefe Sprite Sheet-01-01_54: -1846682315
+      Jefe Sprite Sheet-01-01_55: 1061462595
+      Jefe Sprite Sheet-01-01_56: -970191594
+      Jefe Sprite Sheet-01-01_57: -133436168
+      Jefe Sprite Sheet-01-01_58: 973266275
+      Jefe Sprite Sheet-01-01_59: -513557593
+      Jefe Sprite Sheet-01-01_6: 58652639
+      Jefe Sprite Sheet-01-01_60: -1137068803
+      Jefe Sprite Sheet-01-01_61: -1625499491
+      Jefe Sprite Sheet-01-01_62: 923175719
+      Jefe Sprite Sheet-01-01_63: -1518886566
+      Jefe Sprite Sheet-01-01_64: 439542052
+      Jefe Sprite Sheet-01-01_65: 667458278
+      Jefe Sprite Sheet-01-01_66: -1570412090
+      Jefe Sprite Sheet-01-01_67: 801200406
+      Jefe Sprite Sheet-01-01_68: 1851391697
+      Jefe Sprite Sheet-01-01_69: -92839924
+      Jefe Sprite Sheet-01-01_7: -1808714771
+      Jefe Sprite Sheet-01-01_70: -1951449969
+      Jefe Sprite Sheet-01-01_71: -353040581
+      Jefe Sprite Sheet-01-01_72: 88068416
+      Jefe Sprite Sheet-01-01_8: 1435188312
+      Jefe Sprite Sheet-01-01_9: 1047673999
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
