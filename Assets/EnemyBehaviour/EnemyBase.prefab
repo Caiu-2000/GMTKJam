@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 456743242451818307}
   - component: {fileID: 8848059471234360894}
   - component: {fileID: 8502111832461954265}
+  - component: {fileID: 1075642170690668202}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -211,6 +212,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entity: {fileID: 262276131856806081}
+--- !u!114 &1075642170690668202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2116413410087781542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d52c28e5c7e5b944b13f951bc46550f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DirSprites:
+  - {fileID: 21300000, guid: b35aae993fa883b49b5225aca85bfd93, type: 3}
+  - {fileID: 21300000, guid: f5136978db3371944a715113b0c3baf6, type: 3}
+  - {fileID: 21300000, guid: b003f1f47bab23748bec9ac600945f59, type: 3}
+  - {fileID: 21300000, guid: 31a805c307e45ea488bce8837006105a, type: 3}
+  AttackSprites: []
+  parent: {fileID: 262276131856806081}
 --- !u!1 &4412643127566618072
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,12 +392,15 @@ MonoBehaviour:
   _StaminaCD: 1
   _StaminaCount: 0
   _StaminaRegen: 25
+  LastDirection: {x: 0, y: 0}
   _movement:
     _RB: {fileID: 6129933442193464992}
     _parentEntity: {fileID: 262276131856806081}
     Speed: 5
+    LastDirection: {x: 0, y: 0}
   _combat: {fileID: 6608886043800936607}
   _animator: {fileID: 5633915369398564797}
+  _SpriteAnimator: {fileID: 0}
   SoundEmmiter:
     _audioSource: {fileID: 2827504273406414108}
     sounds:
@@ -421,6 +444,7 @@ MonoBehaviour:
     _RB: {fileID: 0}
     _parentEntity: {fileID: 0}
     Speed: 0
+    LastDirection: {x: 0, y: 0}
   DebugText: {fileID: 1690255091965770318}
 --- !u!114 &6447024411372349469
 MonoBehaviour:
@@ -434,7 +458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cd49f51dcfc4c45834a07cb54d852f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Chasing
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 1
@@ -454,14 +477,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f09668684c23164aa7cb8527e38d529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: 
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 1
   Paused: {fileID: 0}
-  debug1: {x: 0, y: 0, z: 0}
-  debug2: {x: 0, y: 0, z: 0}
-  debug3: {x: 0, y: 0, z: 0}
 --- !u!114 &7538107384526274484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,7 +493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1931c00f1e5097149be814845e067ec1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: AttackMele
   AnimationTrigger: 
   DefaultNextState: {fileID: 6447024411372349469}
   IsPausable: 1
@@ -493,7 +511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20d4e345494fa940955963552e01f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Patroll
   AnimationTrigger: 
   DefaultNextState: {fileID: 6447024411372349469}
   IsPausable: 1
@@ -510,7 +527,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65352cf81140634fa822c46e2cb5938, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Death
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 0
@@ -526,7 +542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4d8e6a0e765b5043895d14e61575152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateName: Charge
   AnimationTrigger: 
   DefaultNextState: {fileID: 6447024411372349469}
   IsPausable: 0
