@@ -4,7 +4,7 @@ using UnityEngine;
 public class HealBuff : MonoBehaviour
 {
 
-    private bool IsReady = false;
+    public bool IsReady = false;
     [SerializeField] private float BuffDuration = 3.0f;
     [SerializeField] float Healtick = 1;
 

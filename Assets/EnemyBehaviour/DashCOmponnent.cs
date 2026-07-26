@@ -1,7 +1,7 @@
 using System.Collections;
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
+
 using UnityEngine;
-using UnityEngine.Rendering;
+
 
 
 public class DashCOmponnent : MonoBehaviour
@@ -22,8 +22,6 @@ public class DashCOmponnent : MonoBehaviour
 
         if (CanDash) StartCoroutine(DashSecuence());
     }
-
-
 
     public void ActivateDash()
     {
