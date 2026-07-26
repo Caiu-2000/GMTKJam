@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72910469159c09c4aa3ddf3bb7535c73, type: 3}
   m_Name: SpawnConfig
   m_EditorClassIdentifier: 
-  baseSpawnInterval: 3
+  baseSpawnInterval: 20
   spawnRateMultiplier:
     serializedVersion: 2
     m_Curve:
@@ -37,4 +37,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 4412643127566618072, guid: b15ca980dd70cb0448942f36a650cdb7, type: 3}
+  - {fileID: 4412643127566618072, guid: 8a151b9f23b5e524ab3bea6f9147acbb, type: 3}
