@@ -13,7 +13,10 @@ public class DashCOmponnent : MonoBehaviour
     [SerializeField] float DashDuration = 0.25f;
 
     public bool DashLinked = false;
- 
+
+    public delegate void DashedSucces();
+
+    public DashedSucces OnDashed;
     private void Dash()
     {
 
@@ -32,6 +35,7 @@ public class DashCOmponnent : MonoBehaviour
 
     private IEnumerator DashSecuence()
     {
+        OnDashed?.Invoke();
         Vector2 DirectionReference = LastWalkedDirection;
         GeneralHandler.player.input.DeactivateActions();
         float AuxiliarSpeed = GeneralHandler.player._movement.Speed;

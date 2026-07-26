@@ -43,6 +43,7 @@ public class CombatComponnetnt : MonoBehaviour
         LastAttackedPos = AttackedGlobalPosition;
         StartCoroutine(AttackSecuence(AttackedGlobalPosition));
         ControllingEntity.OnEntityAttacked?.Invoke();
+        print("Llmae entity attacked");
 
     }
 

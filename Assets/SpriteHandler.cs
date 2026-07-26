@@ -16,6 +16,10 @@ public class SpriteHandler : MonoBehaviour
     private void Update()
     {
         spriteRenderer.sprite = DirSprites[Get4DirectionIndex(parent._movement.LastDirection)];
+        if (parent.Machine.CurrentState is ChargeAttack)
+        {
+            spriteRenderer.sprite = AttackSprites[Get4DirectionIndex(parent._movement.LastDirection)];
+        }
     }
     public int Get4DirectionIndex(Vector2 dir)
     {

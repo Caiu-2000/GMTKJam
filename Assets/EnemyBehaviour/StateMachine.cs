@@ -5,7 +5,7 @@ using TMPro;
 public class StateMachine :MonoBehaviour
 {
     [SerializeReference] private State[] statesList;
-    [SerializeReference] private State CurrentState;
+    [SerializeReference] public State CurrentState;
     [SerializeReference] private State DefaultState;
     [SerializeField] private State DeathState;
     [SerializeField] private DamagedState _damaged;
