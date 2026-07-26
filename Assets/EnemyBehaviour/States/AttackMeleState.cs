@@ -21,7 +21,7 @@ public class AttackMeleState : State
     private IEnumerator chargeSecuence()
     {
         // TRIGUEREAR ANIMACION
-    
+        _controlledEntity._SpriteAnimator.SetTrigger(AnimationTrigger);
         ParentMachine._movement.Move(new Vector2(0, 0));
         yield return new WaitForSeconds(chargeDuration);
         ParentMachine.CallAttack(GeneralHandler.player.transform.position);

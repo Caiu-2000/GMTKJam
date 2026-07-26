@@ -247,7 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba02952ee297274fabad5c4ed358be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 261504991723748358}
+  spriteRenderer: {fileID: 0}
 --- !u!1 &4412643127566618072
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +295,7 @@ Transform:
   - {fileID: 456743242451818307}
   - {fileID: 891199724600579259}
   - {fileID: 5084331038024847346}
+  - {fileID: 8308004511551914921}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5633915369398564797
@@ -563,7 +565,7 @@ MonoBehaviour:
   AnimationTrigger: 
   DefaultNextState: {fileID: 0}
   IsPausable: 1
-  RangeForAttack: 1
+  RangeForAttack: 3
   ChargeState: {fileID: 9097794508911000385}
   Attack: {fileID: 3362511717989238220}
   ChaseFire: 0
@@ -611,10 +613,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationTrigger: Attack
-  DefaultNextState: {fileID: 0}
+  DefaultNextState: {fileID: 6144065248091072700}
   IsPausable: 1
-  chargeDuration: 0
-  ChargeCD: 0
+  chargeDuration: 0.3
+  ChargeCD: 1
   ChargeInCD: 0
 --- !u!114 &9097794508911000385
 MonoBehaviour:
@@ -629,14 +631,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimationTrigger: Dash
-  DefaultNextState: {fileID: 0}
+  DefaultNextState: {fileID: 6144065248091072700}
   IsPausable: 1
   SpeedMultiplier: 3
   chargeDuration: 0.75
-  CastDuration: 5
+  CastDuration: 0.5
   ChargeCD: 10
   ChargeInCD: 0
   objective: {fileID: 0}
+--- !u!1 &5481787900061646034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8308004511551914921}
+  - component: {fileID: 3669190257048730746}
+  m_Layer: 0
+  m_Name: BulletHellComponnent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8308004511551914921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481787900061646034}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 665524840942588311}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3669190257048730746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5481787900061646034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba95286b9e1566946b4224b4283ae376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8113026964324327088
 GameObject:
   m_ObjectHideFlags: 0
