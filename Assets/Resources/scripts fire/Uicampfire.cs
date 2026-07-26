@@ -11,7 +11,7 @@ public class Uicampfire : MonoBehaviour
     void Update()
     {
         Player player = GeneralHandler.Instance.GetPlayer();
-        if (Keyboard.current.tKey.wasPressedThisFrame)
+        if (Keyboard.current.yKey.wasPressedThisFrame)
         {
             if (campfire.currentTier == 0 && player.inventory.GetLogs() >= 5)
             {
@@ -25,7 +25,7 @@ public class Uicampfire : MonoBehaviour
             }
             panel.SetActive(false);
         }
-        if (Keyboard.current.yKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame)
         {
             if (player.inventory.GetLogs() >= 1)
             {
@@ -34,7 +34,7 @@ public class Uicampfire : MonoBehaviour
             }
             panel.SetActive(false);
         }
-        if (Keyboard.current.uKey.wasPressedThisFrame && torch.activeSelf == false)
+        if (Keyboard.current.tKey.wasPressedThisFrame && torch.activeSelf == false)
         {
             if (player.inventory.GetLogs() >= 1)
             {

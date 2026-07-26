@@ -6,7 +6,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] Transform[] spawnPoints;
     float timer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void OnEnable()
+    void Start()
     {
         BossProgressManager.Instance.OnBossSpawn += HandleBossSpawn;
     }

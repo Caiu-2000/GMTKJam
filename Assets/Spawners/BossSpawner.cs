@@ -4,7 +4,7 @@ public class BossSpawner : MonoBehaviour
 {
     [SerializeField] GameObject bossPrefab;
     [SerializeField] Transform bossSpawnPoint;
-    void OnEnable()
+    void Start()
     {
         BossProgressManager.Instance.OnBossSpawn += SpawnBoss;
     }
