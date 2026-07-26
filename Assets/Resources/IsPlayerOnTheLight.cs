@@ -19,7 +19,7 @@ public class IsPlayerOnTheLight : MonoBehaviour
         if (activeLights.Count == 0) return;
         foreach (Light light in activeLights)
         {
-            if (Vector3.Distance(player.transform.position, light.transform.position) <= light.range/3 && light.enabled)
+            if (Vector3.Distance(player.transform.position, light.transform.position) <= light.range/2 && light.enabled)
             {
                 isPlayerInRange = true;
                 break;
