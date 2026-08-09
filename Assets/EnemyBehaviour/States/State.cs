@@ -5,7 +5,7 @@ using UnityEngine;
 public  class State : MonoBehaviour
 {
 
-    [SerializeField] protected string AnimationTrigger;
+    [SerializeField] protected string AnimationTrigger = "notanim";
     [SerializeField] protected State DefaultNextState;
     [SerializeField] public bool IsPausable = true;
     protected StateMachine ParentMachine;
@@ -19,7 +19,8 @@ public  class State : MonoBehaviour
 
     public virtual void StartState()
     {
-        if (AnimationTrigger != null && _controlledEntity._SpriteAnimator != null) _controlledEntity._SpriteAnimator.SetTrigger(AnimationTrigger);
+        if (AnimationTrigger == "notanim") return; 
+        if (AnimationTrigger != null && _controlledEntity._SpriteAnimator != null || AnimationTrigger != "") _controlledEntity._SpriteAnimator.SetTrigger(AnimationTrigger);
     }
 
     public virtual void StopState() 

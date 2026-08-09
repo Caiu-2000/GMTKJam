@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82cd49f51dcfc4c45834a07cb54d852f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationTrigger: 
+  AnimationTrigger: notanim
   DefaultNextState: {fileID: 0}
   IsPausable: 1
   RangeForAttack: 3
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1799d02bf20f47c49ad3b378ef38a12a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationTrigger: 
+  AnimationTrigger: notanim
   DefaultNextState: {fileID: 1097115059918811400}
   IsPausable: 1
 --- !u!114 &3362511717989238220
@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a20d4e345494fa940955963552e01f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationTrigger: 
+  AnimationTrigger: notanim
   DefaultNextState: {fileID: 0}
   IsPausable: 0
   DetectionRange: 0
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aeed2a4e02bd64eb1176c56df84112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationTrigger: 
+  AnimationTrigger: notanim
   DefaultNextState: {fileID: 0}
   IsPausable: 1
 --- !u!1 &4626455145379339382
