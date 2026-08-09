@@ -6,7 +6,7 @@ public class Tree : MonoBehaviour, IHittable
     [SerializeField] float life = 3;
     [SerializeField] int woodToGive = 1;
     bool vulnerable = false;
-
+    [SerializeField] protected GameObject particles;
     //Estas son las variables para la logica de que se incline al golpearlo
    private float anguloInclinacion = 10f; // Ángulo máximo a inclinar
    private float velocidadRotacion = 35f;  // Qué tan rápido se inclina
@@ -31,6 +31,7 @@ public class Tree : MonoBehaviour, IHittable
             vulnerable = true;
             StartCoroutine(IFrame());
             Incline(hitt); // Esta funcion da el feedback
+            Instantiate(particles);
         }
     }
     void Update()

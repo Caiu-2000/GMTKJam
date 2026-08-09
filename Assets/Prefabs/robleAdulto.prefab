@@ -103,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 12
   woodToGive: 10
+  particles: {fileID: 2972280726441846081, guid: 149d6e82d4bb5294b98ef46af05b4a30, type: 3}
 --- !u!65 &2693242559872396265
 BoxCollider:
   m_ObjectHideFlags: 0
