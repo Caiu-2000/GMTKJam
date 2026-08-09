@@ -15,7 +15,7 @@ public class Inventory
     #region logs
     public void AddLogs(int amount)
     {
-        Debug.Log("Se agrego un tronco");
+        
         logs += amount;
     }
     public void RemoveLogs(int amount)

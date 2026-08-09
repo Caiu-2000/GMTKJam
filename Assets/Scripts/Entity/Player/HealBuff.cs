@@ -5,7 +5,7 @@ public class HealBuff : MonoBehaviour
 {
 
     public bool IsReady = false;
-    [SerializeField] private float BuffDuration = 3.0f;
+   
     [SerializeField] float Healtick = 1;
 
     private bool Islinked = false;
