@@ -398,6 +398,7 @@ MonoBehaviour:
     name: 
     Tier: 0
   FromPlayer: 0
+  HitParticles: {fileID: 0}
 --- !u!114 &262276131856806081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,6 +449,7 @@ MonoBehaviour:
       Source: {fileID: 0}
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+  _damagedParticles: {fileID: 2972280726441846081, guid: b202b7cc037bea143a0425d96039db1e, type: 3}
   Machine: {fileID: 8710736664375351555}
   Loot: 1
   GoldLooteable: 3

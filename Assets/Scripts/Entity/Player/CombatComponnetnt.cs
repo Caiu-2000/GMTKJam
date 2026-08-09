@@ -12,7 +12,7 @@ public class CombatComponnetnt : MonoBehaviour
 
     private bool CanAttack = true;
     private Entity ControllingEntity;
-    
+
 
     #region Debug
 
@@ -43,7 +43,7 @@ public class CombatComponnetnt : MonoBehaviour
         LastAttackedPos = AttackedGlobalPosition;
         StartCoroutine(AttackSecuence(AttackedGlobalPosition));
         ControllingEntity.OnEntityAttacked?.Invoke();
-        print("Llmae entity attacked");
+    
 
     }
 
@@ -69,7 +69,7 @@ public class CombatComponnetnt : MonoBehaviour
                     if (FromPlayer && collider.gameObject.GetComponent<Player>() ) continue;
                     if (!FromPlayer && collider.gameObject.GetComponent<Enemy>()) continue;
                   
-                    ApplyAttack(collider);
+                    ApplyAttack(collider , attackworldposition);
                 }
             
             }
@@ -105,9 +105,10 @@ public class CombatComponnetnt : MonoBehaviour
     {
         CurrentWeapon = newWeapon;
     }
-    public void ApplyAttack(Collider hittedObj)
+    public void ApplyAttack(Collider hittedObj , Vector3 worldpos)
     {
         hittedObj.gameObject.GetComponent<IHittable>().Hitt(new Hitt(CurrentWeapon.damage , AttackPosition(LastAttackedPos)));
+        
     }
     public void ApplyAttack(Player player)
     {

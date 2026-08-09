@@ -24,7 +24,7 @@ public abstract class Entity : MonoBehaviour, IHittable
     [SerializeField]
     protected EntitySoundComponent SoundEmmiter = new EntitySoundComponent();
 
-
+    [SerializeField] protected GameObject _damagedParticles;
 
     #region Delegates
 
@@ -59,6 +59,7 @@ public abstract class Entity : MonoBehaviour, IHittable
            
             return;
         }
+        Instantiate(_damagedParticles, transform.position, Quaternion.identity);
         StartCoroutine(DamCd());
         if (_currentLife == 0) _currentLife = _maxLife;
         _currentLife -= damage;

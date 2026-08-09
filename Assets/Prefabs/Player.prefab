@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLife: 0
-  _maxLife: 100
+  _maxLife: 1
   _damCD: 0
   _CanInputMovement: 1
   _maxStamina: 100
@@ -494,6 +494,7 @@ MonoBehaviour:
       Source: {fileID: 0}
     AudioAlbum: []
     AudioMixerGroup: {fileID: -9126365925168523611, guid: 5b8b7ee6f9fd79a40b85c5efba93cec5, type: 2}
+  _damagedParticles: {fileID: 2972280726441846081, guid: 88bdb596e8c6f5049973b33d42c4a537, type: 3}
   input: {fileID: 7930604962453865310}
   PlayerSpeed: 50
 --- !u!114 &7930604962453865310
@@ -532,6 +533,7 @@ MonoBehaviour:
     name: Hacha
     Tier: 0
   FromPlayer: 0
+  HitParticles: {fileID: 2972280726441846081, guid: b202b7cc037bea143a0425d96039db1e, type: 3}
 --- !u!95 &6613392932344254791
 Animator:
   serializedVersion: 7
@@ -733,7 +735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsReady: 0
-  BuffDuration: 3
   Healtick: 1
 --- !u!1 &4777944877343073205
 GameObject:

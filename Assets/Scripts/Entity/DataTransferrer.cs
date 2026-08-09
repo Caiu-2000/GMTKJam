@@ -28,8 +28,7 @@ public class DataTransferrer : MonoBehaviour
     private void Update()
     {
         animator.SetBool("Moving" , player._movement._RB.linearVelocity != Vector3.zero);
-        print( player._movement._RB.linearVelocity != Vector3.zero);
-        print(Mouse.current.position);
+
         spirte.flipX = IsMouseOnRightSide();
     }
     private void Attacked()

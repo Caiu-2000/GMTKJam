@@ -28,11 +28,14 @@ public class ChasingState : State
         }
     
         ParentMachine._movement.Move(ParentMachine._ai.DirectionTowards(GeneralHandler.player.transform.position));
+      
 
         if (Vector3.Distance(this.transform.position, GeneralHandler.player.transform.position) < RangeForAttack)
         {
+           
             if (!ChargeState.ChargeInCD)
             {
+         
                 ParentMachine.ChangeState(ChargeState);
             }
             else if (!Attack.ChargeInCD)
