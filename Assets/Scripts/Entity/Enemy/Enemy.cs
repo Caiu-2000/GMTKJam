@@ -68,6 +68,7 @@ public class Enemy : Entity
         {
             Die();
         }
+        Instantiate(_damagedParticles , transform.position , Quaternion.identity);
 
 
     }
