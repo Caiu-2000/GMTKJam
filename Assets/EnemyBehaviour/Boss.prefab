@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentLife: 0
-  _maxLife: 120
+  _maxLife: 60
   _damCD: 0
   _CanInputMovement: 1
   _maxStamina: 100
@@ -628,7 +628,6 @@ MonoBehaviour:
     name: 
     Tier: 0
   FromPlayer: 0
-  HitParticles: {fileID: 0}
 --- !u!114 &8710736664375351555
 MonoBehaviour:
   m_ObjectHideFlags: 0
