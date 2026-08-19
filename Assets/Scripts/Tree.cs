@@ -14,12 +14,21 @@ public class Tree : MonoBehaviour, IHittable
     private Quaternion rotacionInicial;
     private Coroutine corrutinaInclinacion;
 
+    private Material treeMaterial;
+
     private void Start()
     {
 
         rotacionInicial = transform.rotation;
+        treeMaterial = GetComponent<Renderer>().material;
     }
-
+    private void PaintMaterial(Color paintColor)
+    {
+        if (treeMaterial != null)
+        {
+            treeMaterial.color = paintColor;
+        }
+    }
 
     public void Hitt(Hitt hitt)
     {
@@ -73,7 +82,7 @@ public class Tree : MonoBehaviour, IHittable
 
     private IEnumerator InclinarObjeto(Quaternion destino)
     {
-
+        PaintMaterial(new Color(42,129,255)); // Cambia el color a rojo al inclinarse
         while (Quaternion.Angle(transform.rotation, destino) > 0.1f)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, destino, Time.deltaTime * velocidadRotacion);
@@ -90,6 +99,7 @@ public class Tree : MonoBehaviour, IHittable
 
         transform.rotation = rotacionInicial;
         corrutinaInclinacion = null;
+        PaintMaterial(Color.white); // Cambia el color de vuelta a blanco al volver a la posición inicial
     }
 
 }
