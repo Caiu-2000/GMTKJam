@@ -9,7 +9,6 @@ public class AnvilCon : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        print("interact called");
         Player player = GeneralHandler.Instance.GetPlayer();
         if (panel.activeSelf == true) return;
         if(player.inventory.GetGold()>= 5) panel.SetActive(true);
