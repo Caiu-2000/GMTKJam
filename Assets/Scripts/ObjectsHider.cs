@@ -31,16 +31,16 @@ public class ObjectsHider : MonoBehaviour
             occlusionLayer
         );
 
-        foreach (RaycastHit hit in hits)
-        {
-            Renderer rend = hit.collider.GetComponent<Renderer>();
-            print(hit);
-            if (rend != null && !currentObjects.Contains(rend))
-            {
-                currentObjects.Add(rend);
-                SetAlpha(rend, transparentAlpha);
-            }
-        }
+        //foreach (RaycastHit hit in hits)
+        //{
+        //    Renderer rend = hit.collider.GetComponent<Renderer>();
+        //    print(hit);
+        //    if (rend != null && !currentObjects.Contains(rend))
+        //    {
+        //        currentObjects.Add(rend);
+        //        SetAlpha(rend, transparentAlpha);
+        //    }
+        //}
     }
 
     private void SetAlpha(Renderer rend, float alpha)

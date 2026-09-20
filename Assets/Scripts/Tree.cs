@@ -7,6 +7,9 @@ public class Tree : MonoBehaviour, IHittable
     [SerializeField] int woodToGive = 1;
     bool vulnerable = false;
     [SerializeField] protected GameObject particles;
+    private Renderer _renderer;
+    private MaterialPropertyBlock _propBlock;
+    private static readonly int HitTimeID = Shader.PropertyToID("_HitTime");
     //Estas son las variables para la logica de que se incline al golpearlo
    private float anguloInclinacion = 10f; // Ángulo máximo a inclinar
    private float velocidadRotacion = 35f;  // Qué tan rápido se inclina
@@ -16,6 +19,11 @@ public class Tree : MonoBehaviour, IHittable
 
     private Material treeMaterial;
 
+    private void Awake()
+    {
+        _renderer = GetComponent<Renderer>();
+        _propBlock = new MaterialPropertyBlock();
+    }
     private void Start()
     {
 
@@ -39,8 +47,9 @@ public class Tree : MonoBehaviour, IHittable
             life -= hitt.HittDamage;
             vulnerable = true;
             StartCoroutine(IFrame());
+            TriggerWobble();
             //Incline(hitt); // Esta funcion da el feedback
-            Instantiate(particles);
+            //Instantiate(particles);
         }
     }
     void Update()
@@ -57,7 +66,12 @@ public class Tree : MonoBehaviour, IHittable
         yield return new WaitForSeconds(0.2f);
         vulnerable = false;
     }
-
+    private void TriggerWobble()
+    {
+        _renderer.GetPropertyBlock(_propBlock);
+        _propBlock.SetFloat(HitTimeID, Time.time);
+        _renderer.SetPropertyBlock(_propBlock);
+    }
     // Esto lo hice con bastante ia no lo voy a negar
     private void Incline(Hitt hittdata)
     {
