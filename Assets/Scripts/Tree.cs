@@ -39,7 +39,7 @@ public class Tree : MonoBehaviour, IHittable
             life -= hitt.HittDamage;
             vulnerable = true;
             StartCoroutine(IFrame());
-            Incline(hitt); // Esta funcion da el feedback
+            //Incline(hitt); // Esta funcion da el feedback
             Instantiate(particles);
         }
     }
