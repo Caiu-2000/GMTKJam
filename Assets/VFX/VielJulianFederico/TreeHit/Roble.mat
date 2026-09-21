@@ -63,6 +63,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _FallAngle: 1.4
+    - _FallDuration: 2
+    - _FallTime: 100000000
     - _HitTime: -1000
     - _QueueControl: 0
     - _QueueOffset: 0

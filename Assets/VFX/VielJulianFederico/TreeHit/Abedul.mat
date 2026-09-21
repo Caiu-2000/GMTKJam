@@ -71,6 +71,9 @@ Material:
     - _Cull: 2
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _FallAngle: 1.4
+    - _FallDuration: 2
+    - _FallTime: 100000000
     - _HitTime: -1000
     - _QueueControl: 0
     - _QueueOffset: 0

@@ -9,6 +9,9 @@ public class Tree : MonoBehaviour, IHittable
     [SerializeField] protected GameObject particles;
     private Renderer _renderer;
     private MaterialPropertyBlock _propBlock;
+    [SerializeField] float FallDuration = 2f;
+    bool isDead = false;
+    private static readonly int FallTimeID = Shader.PropertyToID("_FallTime");
     private static readonly int HitTimeID = Shader.PropertyToID("_HitTime");
     //Estas son las variables para la logica de que se incline al golpearlo
    private float anguloInclinacion = 10f; // Ángulo máximo a inclinar
@@ -54,11 +57,13 @@ public class Tree : MonoBehaviour, IHittable
     }
     void Update()
     {
-        if (life <= 0)
+        if (life <= 0  && !isDead)
         {
+            isDead = true;
+            TriggerFall();
             Player player = GeneralHandler.Instance.GetPlayer();
             player.inventory.AddLogs(woodToGive);
-            Destroy(gameObject);
+            StartCoroutine(DestroyAfterFall());
         }
     }
     IEnumerator IFrame()
@@ -71,6 +76,19 @@ public class Tree : MonoBehaviour, IHittable
         _renderer.GetPropertyBlock(_propBlock);
         _propBlock.SetFloat(HitTimeID, Time.time);
         _renderer.SetPropertyBlock(_propBlock);
+    }
+    private void TriggerFall()
+    {
+        _renderer.GetPropertyBlock(_propBlock);
+        _propBlock.SetFloat(FallTimeID, Time.time);
+        _renderer.SetPropertyBlock(_propBlock);
+    }
+
+    IEnumerator DestroyAfterFall()
+    {
+        GetComponent<Collider>().enabled = false;
+        yield return new WaitForSeconds(FallDuration);
+        Destroy(gameObject);
     }
     // Esto lo hice con bastante ia no lo voy a negar
     private void Incline(Hitt hittdata)
