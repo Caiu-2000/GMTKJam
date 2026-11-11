@@ -33,7 +33,8 @@ Transform:
   m_LocalPosition: {x: 5.1099396, y: 0, z: -3.09}
   m_LocalScale: {x: 0.028002268, y: 0.028002268, z: 0.028002268}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7822541978290985513}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1416348958284688874
@@ -104,6 +105,8 @@ MonoBehaviour:
   life: 6
   woodToGive: 4
   particles: {fileID: 2972280726441846081, guid: 438e2108d4dfbe84bb6b2a2398e3f26c, type: 3}
+  leafs: {fileID: 6551106514125422009}
+  FallDuration: 2
 --- !u!136 &767128122062610603
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -148,3 +151,70 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 321.78217, y: 643.5473, z: 344.8007}
   m_Center: {x: 0, y: 322.1406, z: 29.153}
+--- !u!1001 &7077184223621262438
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1013772889537115866}
+    m_Modifications:
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 43.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 398
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.761983
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.008398498
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.008398498
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70705694
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.70705694
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 88.639
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 3452492185056431180, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+      propertyPath: m_Name
+      value: LeafBurst
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+--- !u!198 &6551106514125422009 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4097432491697164767, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+  m_PrefabInstance: {fileID: 7077184223621262438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7822541978290985513 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1060727411037713999, guid: 7c6185f4568285d4a8a97db4921ecc02, type: 3}
+  m_PrefabInstance: {fileID: 7077184223621262438}
+  m_PrefabAsset: {fileID: 0}

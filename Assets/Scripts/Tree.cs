@@ -6,7 +6,8 @@ public class Tree : MonoBehaviour, IHittable
     [SerializeField] float life = 3;
     [SerializeField] int woodToGive = 1;
     bool vulnerable = false;
-    [SerializeField] protected GameObject particles;
+    [SerializeField] protected GameObject particles;    //Ni idea de quien lo dejo aca, esto es pre vfx
+    [SerializeField] protected ParticleSystem leafs;
     private Renderer _renderer;
     private MaterialPropertyBlock _propBlock;
     [SerializeField] float FallDuration = 2f;
@@ -16,7 +17,7 @@ public class Tree : MonoBehaviour, IHittable
     //Estas son las variables para la logica de que se incline al golpearlo
    private float anguloInclinacion = 10f; // Ángulo máximo a inclinar
    private float velocidadRotacion = 35f;  // Qué tan rápido se inclina
-
+    float t = 0f;
     private Quaternion rotacionInicial;
     private Coroutine corrutinaInclinacion;
 
@@ -51,6 +52,13 @@ public class Tree : MonoBehaviour, IHittable
             vulnerable = true;
             StartCoroutine(IFrame());
             TriggerWobble();
+            if(!leafs.isPlaying || t >= 2f)
+            {
+                print(t);
+                StopCoroutine(ResetLeaves());
+                leafs.Play();
+                StartCoroutine(ResetLeaves());
+            }
             //Incline(hitt); // Esta funcion da el feedback
             //Instantiate(particles);
         }
@@ -133,5 +141,13 @@ public class Tree : MonoBehaviour, IHittable
         corrutinaInclinacion = null;
         PaintMaterial(Color.white); // Cambia el color de vuelta a blanco al volver a la posición inicial
     }
-
+    IEnumerator ResetLeaves()
+    {
+        t = 0f;
+        while (t < 4f)
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
 }
