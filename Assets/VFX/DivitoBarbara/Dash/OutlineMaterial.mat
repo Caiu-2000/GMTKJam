@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Gosth material
+  m_Name: OutlineMaterial
   m_Shader: {fileID: -6465566751694194690, guid: 24e36ca4fc2c2fc409bae0db49cb728c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -55,7 +55,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _OutlineReveal: 1
-    - _Outline_Thickness: 0.001
+    - _Outline_Thickness: 0.01
     m_Colors:
     - _Outline_Color: {r: 0.4754715, g: 4, b: 3.70464, a: 0}
   m_BuildTextureStacks: []

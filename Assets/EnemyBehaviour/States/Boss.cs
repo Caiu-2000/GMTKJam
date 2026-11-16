@@ -27,8 +27,7 @@ public class Boss : Enemy
     public override void applyDamage(float damage, Hitt attack)
     {
         base.applyDamage(damage, attack);
-        Vector3 dir = spriteRenderer.flipX ? Vector3.right : Vector3.left;
-        bossBloodEffect.PlayHit(transform.position, dir);
+        bossBloodEffect.PlayHit(transform.position, GeneralHandler.player.transform.position);
         if (_currentLife <= (_maxLife * 0.25f) && FirstQuarter)
         {
             FirstQuarter = false;
