@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class HealBuff : MonoBehaviour
 {
-
+    [SerializeField] float Cooldown = 20.0f;
+    public event System.Action<float> OnCooldownStarted;
+    public event System.Action OnReady;
     public bool IsReady = false;
    
     [SerializeField] float Healtick = 1;
@@ -19,6 +21,7 @@ public class HealBuff : MonoBehaviour
         print("Se desbloqueo heal");
         GeneralHandler.player.input.OnHealPressed += ActivateBuff;
         Islinked = true;
+        OnReady?.Invoke();
     }
 
     public void ActivateBuff()
@@ -35,7 +38,9 @@ public class HealBuff : MonoBehaviour
         IsReady = false;
       
         GeneralHandler.player.Heal(Healtick * 10);
-        yield return new WaitForSeconds(20.0f);
+        OnCooldownStarted?.Invoke(Cooldown);
+        yield return new WaitForSeconds(Cooldown);
         IsReady = true;
+        OnReady?.Invoke();
     }
 }

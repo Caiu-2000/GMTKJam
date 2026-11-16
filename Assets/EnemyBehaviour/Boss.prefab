@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 5633915369398564797}
   - component: {fileID: 6129933442193464992}
   - component: {fileID: 6136141858668237060}
+  - component: {fileID: 4741802311056643746}
   - component: {fileID: 4244620550543871293}
   - component: {fileID: 6608886043800936607}
   - component: {fileID: 8710736664375351555}
@@ -677,6 +678,20 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4741802311056643746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4412643127566618072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c65cd0c8d37f79438d0b5d4c1922c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodPrefab: {fileID: 5854457194724873163, guid: 25316126cb3b56345be988e2b26b9ac3, type: 3}
+  lifetime: 3
 --- !u!114 &4244620550543871293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,8 +732,10 @@ MonoBehaviour:
   GoldLooteable: 1
   HalfLifeState: {fileID: 8734829225744382142}
   HellBehaviour: {fileID: 3669190257048730746}
+  bossBloodEffect: {fileID: 4741802311056643746}
   Enemies: []
   SpawnRadius: 10
+  spriteRenderer: {fileID: 8848059471234360894}
 --- !u!114 &6608886043800936607
 MonoBehaviour:
   m_ObjectHideFlags: 0

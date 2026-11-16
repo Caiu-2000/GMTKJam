@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class DashCOmponnent : MonoBehaviour
 {
+    [SerializeField] float DashCooldown = 1.0f;
+    public event System.Action<float> OnCooldownStarted;
+    public event System.Action OnReady;
+    public event System.Action OnDashFinished;
     public  bool CanDash = false;
 
     private Vector2 LastWalkedDirection;
@@ -28,12 +32,14 @@ public class DashCOmponnent : MonoBehaviour
         CanDash = true;
         GeneralHandler.player.input.OnDashPressed += Dash;
         DashLinked = true;
+        OnReady?.Invoke();
     }
     
 
     private IEnumerator DashSecuence()
     {
         OnDashed?.Invoke();
+        OnCooldownStarted?.Invoke(DashDuration+DashCooldown);
         Vector2 DirectionReference = LastWalkedDirection;
         GeneralHandler.player.input.DeactivateActions();
         float AuxiliarSpeed = GeneralHandler.player._movement.Speed;
@@ -54,13 +60,13 @@ public class DashCOmponnent : MonoBehaviour
             yield return null;
 
         }
-
+        OnDashFinished?.Invoke();
         GeneralHandler.player._damCD = false;
         GeneralHandler.player._movement.Speed = AuxiliarSpeed;
         GeneralHandler.player.input.ActivateActions();
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(DashCooldown);
         CanDash = true;
-
+        OnReady?.Invoke();
 
 
     }

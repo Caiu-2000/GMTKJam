@@ -8,6 +8,7 @@ public class BossSpawner : MonoBehaviour
     [SerializeField] Transform bossSpawnPoint;
     [SerializeField] Transform bossSpawnPointDebug;
     [SerializeField] GameObject BossCircleVFX;
+    [SerializeField] BossVeinsEffect veinsEffect;
     [SerializeField] float spawnTimer = 2f;
     GameObject bossDebug;
     bool bossSpawning = false;
@@ -44,20 +45,24 @@ public class BossSpawner : MonoBehaviour
     }
     IEnumerator SpawnCircleDebug()
     {
+        veinsEffect.Show();
         bossSpawning = true;
         var  circleSpawner = Instantiate(BossCircleVFX, bossSpawnPointDebug.position, bossSpawnPoint.rotation);
         yield return new WaitForSeconds(spawnTimer);
         Destroy(circleSpawner);
         bossDebug = Instantiate(bossPrefab, bossSpawnPointDebug.position, bossSpawnPoint.rotation);
         bossSpawning = false;
+        veinsEffect.Hide();
     }
     IEnumerator SpawnCircle()
     {
+        veinsEffect.Show();
         bossSpawning = true;
         var circleSpawner = Instantiate(BossCircleVFX, bossSpawnPoint.position, bossSpawnPoint.rotation);
         yield return new WaitForSeconds(spawnTimer);
         Destroy(circleSpawner);
         Instantiate(bossPrefab, bossSpawnPoint.position, bossSpawnPoint.rotation);
         bossSpawning = false;
+        veinsEffect.Hide();
     }
 }

@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class DamageUpgrade : MonoBehaviour
 {
+    [SerializeField] float Cooldown = 10.0f;
+    public event System.Action<float> OnCooldownStarted;
+    public event System.Action OnReady;
     public bool IsReady = false;
     [SerializeField] private float BuffDuration = 3.0f;
 
@@ -18,6 +21,7 @@ public class DamageUpgrade : MonoBehaviour
         IsReady = true;
         GeneralHandler.player.input.OnBuffPressed += ActivateBuff;
         Islinked = true;
+        OnReady?.Invoke();
     }
 
     public void ActivateBuff()
@@ -34,7 +38,9 @@ public class DamageUpgrade : MonoBehaviour
         GeneralHandler.DamageBuffed = true;
         yield return new WaitForSeconds(BuffDuration);
         GeneralHandler.DamageBuffed = false;
-        yield return new WaitForSeconds(10.0f);
+        OnCooldownStarted?.Invoke(Cooldown);
+        yield return new WaitForSeconds(Cooldown);
         IsReady = true ;
+        OnReady?.Invoke();
     }
 }

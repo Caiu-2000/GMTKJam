@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Boss : Enemy
@@ -7,10 +8,10 @@ public class Boss : Enemy
     private bool FirsTimeBelowHalf = true;
     private bool FirstQuarter = true;
     [SerializeField] private BulletHellBehaviour HellBehaviour;
-
+    [SerializeField] BossHitEffect bossBloodEffect;
     [SerializeField] private Enemy[] Enemies;
     [SerializeField] float SpawnRadius = 10.0f;
-
+    [SerializeField] SpriteRenderer spriteRenderer;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class Boss : Enemy
     public override void applyDamage(float damage, Hitt attack)
     {
         base.applyDamage(damage, attack);
+        Vector3 dir = spriteRenderer.flipX ? Vector3.right : Vector3.left;
+        bossBloodEffect.PlayHit(transform.position, dir);
         if (_currentLife <= (_maxLife * 0.25f) && FirstQuarter)
         {
             FirstQuarter = false;
